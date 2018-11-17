@@ -193,6 +193,7 @@ where
 	if err != nil {
 		return
 	}
+    defer rows.Close()
     for rows.Next() {
 		var voiceSample []byte
     	err = rows.Scan(&voiceSample)

@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"fmt"
 	"github.com/nickaroot/rosbank_techmadness/server/accessor"
+	"github.com/nickaroot/rosbank_techmadness/server/ml_magic"
 	"github.com/valyala/fasthttp"
 	"net/http"
 	"strconv"
@@ -131,7 +131,12 @@ func (e *Env) CheckSpeech(ctx *fasthttp.RequestCtx) {
 		return
 	}
 
-	fmt.Print(len(voiceSamples))
-	// TODO: прикрутить распознавание.
+	match, err := ml_magic.CompareVoise(voiceSamples, ctx.Request.Body())
+
+	if match {
+		ctx.Response.SetBody([]byte("true"))
+	} else {
+		ctx.Response.SetBody([]byte("false"))
+	}
 	return
 }
