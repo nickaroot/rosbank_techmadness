@@ -465,6 +465,7 @@
         <image name="sendMessageButton" width="335" height="49"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="PEm-HP-b7h"/>
         <segue reference="OM9-74-Jje"/>
         <segue reference="lai-UG-NnY"/>
     </inferredMetricsTieBreakers>
