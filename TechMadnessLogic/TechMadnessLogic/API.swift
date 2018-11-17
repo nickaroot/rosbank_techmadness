@@ -1,5 +1,5 @@
 //
-//  Associations.swift
+//  API.swift
 //  TechMadnessLogic
 //
 //  Created by Nikita Arutyunov on 17/11/2018.
@@ -136,7 +136,7 @@ class API {
         class func verifyWord(login: String, index: Int, word: String,
                         completionHandler: @escaping (_ success: Bool) -> Void) {
             
-            let path = "/api/association_word/\(login)/\(index)?keyword=\(word)"
+            let path = "/api/association_word_check/\(login)/\(index)?keyword=\(word)"
             
             API.postRequest(path: path, data: nil) { (success, data) in
                 completionHandler(success)
@@ -150,7 +150,7 @@ class API {
         class func verifySpeech(login: String, index: Int, speech: Data,
                           completionHandler: @escaping (_ success: Bool, _ speech: Data?) -> Void) {
             
-            let path = "/api/speech_standard/\(login)/\(index)"
+            let path = "/api/speech_standard_check/\(login)/\(index)"
             
             API.postRequest(path: path, data: nil) { (success, data) in
                 
