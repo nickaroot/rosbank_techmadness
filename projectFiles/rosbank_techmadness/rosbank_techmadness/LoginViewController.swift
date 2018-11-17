@@ -14,10 +14,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwTextField: UITextField!
     
+    var entryCounts = 0
+    
+    
     @IBAction func loginButtomAction(_ sender: Any) {
-        
         if checkStatus(){
+            entryCounts = entryCounts + 1
             self.performSegue(withIdentifier: "entrySegue", sender: nil)
+            reminderAlert()
         } else{
             DispatchQueue.main.async {
                 let alertController = UIAlertController(title: "Ошибка при вводе логина/пароля!", message: "", preferredStyle: UIAlertController.Style.alert)
@@ -54,6 +58,33 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.red
     }
-
+    
+    func reminderAlert()->Void{
+        
+        //DispatchQueue.main.async {
+//            let alertController = UIAlertController(title: "Мера безопасности", message: "Хотите вспомнить ассоциацию?", preferredStyle: UIAlertController.Style.alert)
+//            alertController.addAction(UIAlertAction(title: "Да", style: UIAlertAction.Style.default,handler: nil))
+//            alertController.addAction(UIAlertAction(title: "Позже", style: UIAlertAction.Style.default,handler: nil))
+//            self.present(alertController, animated: true, completion: nil)
+        
+        
+            
+            let alert = UIAlertController(title: "Мера безопасности", message: "Хотите вспомнить ассоциацию?", preferredStyle: UIAlertController.Style.alert)
+            let defaultAction = UIAlertAction(title: "Да", style: .default, handler: {action in
+                switch action.style {
+                case .default:
+                    self.performSegue(withIdentifier: "reminderSegue", sender: nil);
+                case .cancel:
+                    print("Cancel")
+                case .destructive:
+                    print("Destructive")
+                }
+            })
+            alert.addAction(defaultAction)
+            alert.addAction(UIAlertAction(title: "Позже", style: .default,handler: nil))
+            self.present(alert, animated: true, completion: nil)
+       // }
+        
+    }
 }
 

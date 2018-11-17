@@ -52,6 +52,7 @@
                                     <constraint firstAttribute="height" constant="30" id="jc8-6X-Zla"/>
                                 </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Установить PIN для входа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yG-VJ-Uh2">
@@ -138,6 +139,7 @@
                         <outlet property="loginTextField" destination="yHx-p9-kFz" id="GIF-1E-gYE"/>
                         <outlet property="passwTextField" destination="biX-MZ-nFy" id="fQC-iE-5sp"/>
                         <segue destination="avB-21-ybq" kind="show" identifier="entrySegue" id="oEJ-UD-jwY"/>
+                        <segue destination="zjU-cJ-RIA" kind="show" identifier="reminderSegue" id="VcM-Td-D81"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Af5-6K-cDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -155,7 +157,7 @@
         <!--Результат-->
         <scene sceneID="sBD-ak-CkT">
             <objects>
-                <viewController id="avB-21-ybq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="avB-21-ybq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gr7-CR-sK2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +180,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E45-Ow-6zn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="9"/>
+            <point key="canvasLocation" x="1318" y="53"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lsp-1y-yQg">
+            <objects>
+                <viewController storyboardIdentifier="NextView" id="zjU-cJ-RIA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bO1-w7-r3l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QKJ-Q4-XLe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i62-S8-7KU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2138" y="53"/>
         </scene>
     </scenes>
 </document>
