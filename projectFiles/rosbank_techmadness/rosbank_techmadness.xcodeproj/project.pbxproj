@@ -13,6 +13,7 @@
 		1FF4E7B8219FE1BA0020E9CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF4E7B6219FE1BA0020E9CC /* LaunchScreen.storyboard */; };
 		1FF4E7C2219FEE760020E9CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF4E7C1219FEE760020E9CC /* MainViewController.swift */; };
 		D217AA22219FFC63001C42CA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D217AA21219FFC63001C42CA /* Login.storyboard */; };
+		D217AA24219FFDA6001C42CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217AA23219FFDA6001C42CA /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1FF4E7B9219FE1BA0020E9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF4E7C1219FEE760020E9CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D217AA21219FFC63001C42CA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D217AA23219FFDA6001C42CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1FF4E7B4219FE1BA0020E9CC /* Assets.xcassets */,
 				1FF4E7B6219FE1BA0020E9CC /* LaunchScreen.storyboard */,
 				1FF4E7B9219FE1BA0020E9CC /* Info.plist */,
+				D217AA23219FFDA6001C42CA /* LoginViewController.swift */,
 			);
 			path = rosbank_techmadness;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D217AA24219FFDA6001C42CA /* LoginViewController.swift in Sources */,
 				1FF4E7C2219FEE760020E9CC /* MainViewController.swift in Sources */,
 				1FF4E7AE219FE1B70020E9CC /* AppDelegate.swift in Sources */,
 			);
