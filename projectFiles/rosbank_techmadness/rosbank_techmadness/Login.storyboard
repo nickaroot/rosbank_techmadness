@@ -53,7 +53,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Установить PIN для входа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yG-VJ-Uh2">
                                 <rect key="frame" x="16" y="219" width="205" height="21"/>
@@ -96,6 +96,9 @@
                                 <state key="normal" title="Забыли логин или пароль?">
                                     <color key="titleColor" red="1" green="0.0093617555427757404" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eh5-ke-Ns0" kind="show" id="8Gq-Ek-BPN"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bt-tg-Q8M">
                                 <rect key="frame" x="312" y="214" width="49" height="31"/>
@@ -131,12 +134,23 @@
                         <viewLayoutGuide key="safeArea" id="dFS-cB-UwZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Вход" id="7Cf-H0-Dhb"/>
+                    <connections>
+                        <outlet property="EntryNav" destination="7Cf-H0-Dhb" id="YYv-Bf-sjt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Af5-6K-cDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
-        <!--View Controller-->
+        <!--ForgottenPassword-->
+        <scene sceneID="PZi-OT-SHa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ForgottenPassword" id="eh5-ke-Ns0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RUw-Ah-Mvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="741" y="-344"/>
+        </scene>
+        <!--Результат-->
         <scene sceneID="sBD-ak-CkT">
             <objects>
                 <viewController id="avB-21-ybq" sceneMemberID="viewController">
@@ -158,6 +172,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kav-68-DiR"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Результат" id="lka-2h-fQc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E45-Ow-6zn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
