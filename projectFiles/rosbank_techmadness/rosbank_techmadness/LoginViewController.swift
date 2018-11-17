@@ -63,14 +63,7 @@ class LoginViewController: UIViewController {
     
     func reminderAlert()->Void{
         
-        //DispatchQueue.main.async {
-//            let alertController = UIAlertController(title: "Мера безопасности", message: "Хотите вспомнить ассоциацию?", preferredStyle: UIAlertController.Style.alert)
-//            alertController.addAction(UIAlertAction(title: "Да", style: UIAlertAction.Style.default,handler: nil))
-//            alertController.addAction(UIAlertAction(title: "Позже", style: UIAlertAction.Style.default,handler: nil))
-//            self.present(alertController, animated: true, completion: nil)
-        
-        
-            
+        DispatchQueue.main.async {
             let alert = UIAlertController(title: "Мера безопасности", message: "Хотите вспомнить ассоциацию?", preferredStyle: UIAlertController.Style.alert)
             let defaultAction = UIAlertAction(title: "Да", style: .default, handler: {action in
                 switch action.style {
@@ -85,7 +78,7 @@ class LoginViewController: UIViewController {
             alert.addAction(defaultAction)
             alert.addAction(UIAlertAction(title: "Позже", style: .default,handler: nil))
             self.present(alert, animated: true, completion: nil)
-       // }
+       }
         
     }
 }

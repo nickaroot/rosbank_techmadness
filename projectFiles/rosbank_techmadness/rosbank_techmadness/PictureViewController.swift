@@ -131,10 +131,10 @@ class PictureViewController: UIViewController {
         do {  // 15
             try audioEngene.start()
         } catch {
-            print("Не удается стартонуть движок")
+            print("Ошибка")
         }
         
-        textField.text = "Помедленнее... Я записую...." // 16
+        textField.text = "Помедленнее... Я записываю...." // 16
     }
     
 }

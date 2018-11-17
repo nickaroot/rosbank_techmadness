@@ -23,7 +23,7 @@
                                     <segment title="Банковская карта"/>
                                     <segment title="Счет"/>
                                 </segments>
-                                <color key="tintColor" red="0.90697211027145386" green="0.21340996026992798" blue="0.19309413433074951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.92886120080947876" green="0.24636679887771606" blue="0.34201174974441528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="valueChanged:" destination="Zzq-tH-HQH" eventType="valueChanged" id="JCI-OG-mL4"/>
                                 </connections>
@@ -115,14 +115,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-ZT-WGu">
-                                <rect key="frame" x="36" y="272" width="303" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-ZT-WGu">
+                                <rect key="frame" x="36" y="272" width="303" height="49"/>
                                 <color key="backgroundColor" red="0.90697211030000002" green="0.21340996030000001" blue="0.1930941343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Продолжить">
+                                <state key="normal" title="Продолжить" image="readyButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ezi-yj-AxT" kind="show" id="jOq-VZ-am2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -141,11 +144,97 @@
                             <constraint firstItem="DBL-02-qJd" firstAttribute="leading" secondItem="d7I-iJ-hLe" secondAttribute="leadingMargin" constant="15" id="pHI-Kr-jUt"/>
                             <constraint firstItem="o98-uE-JIk" firstAttribute="top" secondItem="d7I-iJ-hLe" secondAttribute="topMargin" constant="15" id="sAx-LT-D7U"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="6gV-1S-ZjE"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9r-1N-vzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="359"/>
+            <point key="canvasLocation" x="940" y="455"/>
+        </scene>
+        <!--Record View Controller-->
+        <scene sceneID="S9j-sY-L94">
+            <objects>
+                <viewController id="Ezi-yj-AxT" customClass="RecordViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oLt-XA-Dd8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G42-ju-gIM">
+                                <rect key="frame" x="20" y="72" width="335" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G42-ju-gIM" secondAttribute="height" multiplier="335:293" id="5RY-bX-L2P"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PX-fA-C5Z">
+                                <rect key="frame" x="149.5" y="390" width="76" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="717-W1-aIg"/>
+                                    <constraint firstAttribute="height" constant="76" id="fRJ-Yd-LFv"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="recordButton"/>
+                                <connections>
+                                    <action selector="recordButtonDown:" destination="Ezi-yj-AxT" eventType="touchDown" id="ilq-ix-cJC"/>
+                                    <action selector="recordButtonPressed:" destination="Ezi-yj-AxT" eventType="touchUpInside" id="Vcn-3V-kb5"/>
+                                    <action selector="recordButtonTouchUp:" destination="Ezi-yj-AxT" eventType="touchUpOutside" id="yRM-Wh-582"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s9z-fg-lOH" firstAttribute="trailing" secondItem="G42-ju-gIM" secondAttribute="trailing" constant="20" id="2jj-WH-3WX"/>
+                            <constraint firstItem="G42-ju-gIM" firstAttribute="top" secondItem="s9z-fg-lOH" secondAttribute="top" constant="52" id="3qu-vx-Ojp"/>
+                            <constraint firstItem="8PX-fA-C5Z" firstAttribute="centerX" secondItem="oLt-XA-Dd8" secondAttribute="centerX" id="QZ7-vf-cyY"/>
+                            <constraint firstItem="G42-ju-gIM" firstAttribute="leading" secondItem="s9z-fg-lOH" secondAttribute="leading" constant="20" id="mni-Wh-x0a"/>
+                            <constraint firstItem="s9z-fg-lOH" firstAttribute="bottom" secondItem="8PX-fA-C5Z" secondAttribute="bottom" constant="84" id="uoD-Ss-Lt9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s9z-fg-lOH"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="G42-ju-gIM" id="zaq-uC-akm"/>
+                        <outlet property="recordButton" destination="8PX-fA-C5Z" id="ahk-nt-UtB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBm-Zd-I7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2072.8000000000002" y="25.187406296851577"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6ge-Dz-Oh5">
+            <objects>
+                <viewController id="Kjr-hZ-ffw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HA1-K5-dMF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WWM-pH-fBh">
+                                <rect key="frame" x="20" y="72" width="335" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WWM-pH-fBh" secondAttribute="height" multiplier="335:293" id="Xk3-1m-NGZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJu-cN-cXm">
+                                <rect key="frame" x="149.5" y="507" width="76" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="uVM-jj-RyL"/>
+                                    <constraint firstAttribute="width" constant="76" id="uqJ-oi-NQc"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="recordButtobRed"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pJu-cN-cXm" firstAttribute="centerX" secondItem="HA1-K5-dMF" secondAttribute="centerX" id="KeO-AT-MFP"/>
+                            <constraint firstItem="WWM-pH-fBh" firstAttribute="top" secondItem="HMW-L0-0i5" secondAttribute="top" constant="52" id="QB1-Qc-Iap"/>
+                            <constraint firstItem="WWM-pH-fBh" firstAttribute="leading" secondItem="HMW-L0-0i5" secondAttribute="leading" constant="20" id="S2o-cw-ZMu"/>
+                            <constraint firstItem="HMW-L0-0i5" firstAttribute="bottom" secondItem="pJu-cN-cXm" secondAttribute="bottom" constant="84" id="UN8-QK-XQ2"/>
+                            <constraint firstItem="HMW-L0-0i5" firstAttribute="trailing" secondItem="WWM-pH-fBh" secondAttribute="trailing" constant="20" id="YMG-jP-ZK5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HMW-L0-0i5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDo-PP-zbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2956" y="29.685157421289357"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="91l-p6-YPS">
@@ -185,12 +274,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJg-qS-3Wd">
-                                <rect key="frame" x="36" y="272" width="303" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJg-qS-3Wd">
+                                <rect key="frame" x="36" y="272" width="303" height="49"/>
                                 <color key="backgroundColor" red="0.90697211030000002" green="0.21340996030000001" blue="0.1930941343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Продолжить">
+                                <state key="normal" title="Продолжить" image="readyButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ezi-yj-AxT" kind="show" id="XHr-FP-eoc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -209,11 +301,20 @@
                             <constraint firstAttribute="trailingMargin" secondItem="yJg-qS-3Wd" secondAttribute="trailing" constant="20" id="tA5-Sc-kko"/>
                             <constraint firstItem="uIT-Zc-43t" firstAttribute="leading" secondItem="aHE-Bs-gkM" secondAttribute="leadingMargin" constant="15" id="w2W-wL-SeB"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="L7G-Oc-r1P"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tUx-S6-7eX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="-224.88755622188907"/>
+            <point key="canvasLocation" x="940" y="-340"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="readyButton" width="335" height="49"/>
+        <image name="recordButtobRed" width="76" height="76"/>
+        <image name="recordButton" width="76" height="76"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jOq-VZ-am2"/>
+    </inferredMetricsTieBreakers>
 </document>
