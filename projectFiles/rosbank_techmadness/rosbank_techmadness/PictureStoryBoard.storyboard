@@ -17,17 +17,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ms5-c8-Hgx">
-                                <rect key="frame" x="166" y="265" width="52" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2N-ns-wZ7">
+                                <rect key="frame" x="16" y="321" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BrY-bP-vYV"/>
+                                </constraints>
+                                <state key="normal" title="Начать запись"/>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="zQ1-Gg-gxA" eventType="touchUpInside" id="IF9-2G-7hL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xo7-e4-90B">
+                                <rect key="frame" x="16" y="259" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Xze-dW-eLz"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7T8-eI-0m1">
+                                <rect key="frame" x="16" y="50" width="343" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7T8-eI-0m1" secondAttribute="height" multiplier="16:9" id="9vw-lQ-hnl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fqS-md-wki" firstAttribute="trailing" secondItem="xo7-e4-90B" secondAttribute="trailing" constant="16" id="AH3-dc-7PQ"/>
+                            <constraint firstItem="fqS-md-wki" firstAttribute="trailing" secondItem="7T8-eI-0m1" secondAttribute="trailing" constant="16" id="Avk-8o-epU"/>
+                            <constraint firstItem="xo7-e4-90B" firstAttribute="top" secondItem="7T8-eI-0m1" secondAttribute="bottom" constant="16" id="IUJ-G1-ol5"/>
+                            <constraint firstItem="W2N-ns-wZ7" firstAttribute="leading" secondItem="fqS-md-wki" secondAttribute="leading" constant="16" id="Lkb-Il-658"/>
+                            <constraint firstItem="fqS-md-wki" firstAttribute="trailing" secondItem="W2N-ns-wZ7" secondAttribute="trailing" constant="16" id="Wav-jw-gwe"/>
+                            <constraint firstItem="7T8-eI-0m1" firstAttribute="top" secondItem="fqS-md-wki" secondAttribute="top" constant="30" id="gyi-AS-ikt"/>
+                            <constraint firstItem="7T8-eI-0m1" firstAttribute="leading" secondItem="fqS-md-wki" secondAttribute="leading" constant="16" id="jNg-PF-a1D"/>
+                            <constraint firstItem="xo7-e4-90B" firstAttribute="leading" secondItem="fqS-md-wki" secondAttribute="leading" constant="16" id="tGL-em-5Ni"/>
+                            <constraint firstItem="W2N-ns-wZ7" firstAttribute="top" secondItem="xo7-e4-90B" secondAttribute="bottom" constant="32" id="vk6-Hc-pGY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fqS-md-wki"/>
                     </view>
+                    <connections>
+                        <outlet property="recordButton" destination="W2N-ns-wZ7" id="xgy-fr-hyE"/>
+                        <outlet property="textField" destination="xo7-e4-90B" id="Acf-SA-G1l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HzL-mP-E7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
