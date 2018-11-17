@@ -14,6 +14,10 @@
 		1FF4E7C2219FEE760020E9CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF4E7C1219FEE760020E9CC /* MainViewController.swift */; };
 		D217AA22219FFC63001C42CA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D217AA21219FFC63001C42CA /* Login.storyboard */; };
 		D217AA24219FFDA6001C42CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217AA23219FFDA6001C42CA /* LoginViewController.swift */; };
+		D217AA2621A019FB001C42CA /* ForgottenPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D217AA2521A019FB001C42CA /* ForgottenPassword.storyboard */; };
+		D217AA2A21A01A57001C42CA /* ForgottenPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217AA2921A01A57001C42CA /* ForgottenPasswordViewController.swift */; };
+		D217AA3221A045F3001C42CA /* PictureStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D217AA3121A045F3001C42CA /* PictureStoryBoard.storyboard */; };
+		D217AA3421A04BCC001C42CA /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217AA3321A04BCC001C42CA /* PictureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		1FF4E7C1219FEE760020E9CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D217AA21219FFC63001C42CA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D217AA23219FFDA6001C42CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D217AA2521A019FB001C42CA /* ForgottenPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgottenPassword.storyboard; sourceTree = "<group>"; };
+		D217AA2921A01A57001C42CA /* ForgottenPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordViewController.swift; sourceTree = "<group>"; };
+		D217AA3121A045F3001C42CA /* PictureStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PictureStoryBoard.storyboard; sourceTree = "<group>"; };
+		D217AA3321A04BCC001C42CA /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +66,18 @@
 		1FF4E7AC219FE1B70020E9CC /* rosbank_techmadness */ = {
 			isa = PBXGroup;
 			children = (
-				D217AA21219FFC63001C42CA /* Login.storyboard */,
 				1FF4E7AD219FE1B70020E9CC /* AppDelegate.swift */,
 				1FF4E7C1219FEE760020E9CC /* MainViewController.swift */,
 				1FF4E7B1219FE1B70020E9CC /* Main.storyboard */,
 				1FF4E7B4219FE1BA0020E9CC /* Assets.xcassets */,
 				1FF4E7B6219FE1BA0020E9CC /* LaunchScreen.storyboard */,
 				1FF4E7B9219FE1BA0020E9CC /* Info.plist */,
+				D217AA21219FFC63001C42CA /* Login.storyboard */,
 				D217AA23219FFDA6001C42CA /* LoginViewController.swift */,
+				D217AA2521A019FB001C42CA /* ForgottenPassword.storyboard */,
+				D217AA2921A01A57001C42CA /* ForgottenPasswordViewController.swift */,
+				D217AA3121A045F3001C42CA /* PictureStoryBoard.storyboard */,
+				D217AA3321A04BCC001C42CA /* PictureViewController.swift */,
 			);
 			path = rosbank_techmadness;
 			sourceTree = "<group>";
@@ -128,7 +140,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D217AA3221A045F3001C42CA /* PictureStoryBoard.storyboard in Resources */,
 				D217AA22219FFC63001C42CA /* Login.storyboard in Resources */,
+				D217AA2621A019FB001C42CA /* ForgottenPassword.storyboard in Resources */,
 				1FF4E7B8219FE1BA0020E9CC /* LaunchScreen.storyboard in Resources */,
 				1FF4E7B5219FE1BA0020E9CC /* Assets.xcassets in Resources */,
 				1FF4E7B3219FE1B70020E9CC /* Main.storyboard in Resources */,
@@ -144,7 +158,9 @@
 			files = (
 				D217AA24219FFDA6001C42CA /* LoginViewController.swift in Sources */,
 				1FF4E7C2219FEE760020E9CC /* MainViewController.swift in Sources */,
+				D217AA2A21A01A57001C42CA /* ForgottenPasswordViewController.swift in Sources */,
 				1FF4E7AE219FE1B70020E9CC /* AppDelegate.swift in Sources */,
+				D217AA3421A04BCC001C42CA /* PictureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
