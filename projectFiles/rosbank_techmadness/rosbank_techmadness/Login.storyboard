@@ -142,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Af5-6K-cDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+            <point key="canvasLocation" x="54" y="27"/>
         </scene>
         <!--ForgottenPassword-->
         <scene sceneID="PZi-OT-SHa">
@@ -150,7 +150,7 @@
                 <viewControllerPlaceholder storyboardName="ForgottenPassword" id="eh5-ke-Ns0" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUw-Ah-Mvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="741" y="-344"/>
+            <point key="canvasLocation" x="664" y="-391"/>
         </scene>
         <!--Результат-->
         <scene sceneID="sBD-ak-CkT">
@@ -175,10 +175,28 @@
                         <viewLayoutGuide key="safeArea" id="Kav-68-DiR"/>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="lka-2h-fQc"/>
+                    <connections>
+                        <segue destination="C6o-El-N5u" kind="show" identifier="reminderSegue" id="MHy-cv-afX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E45-Ow-6zn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="9"/>
+            <point key="canvasLocation" x="1350" y="27"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hHk-CE-w3l">
+            <objects>
+                <viewController id="C6o-El-N5u" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OGk-QJ-3Ir">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5OQ-tl-Ytz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSR-J8-Eb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126" y="36"/>
         </scene>
     </scenes>
 </document>
