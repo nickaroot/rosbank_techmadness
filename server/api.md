@@ -20,28 +20,34 @@
 POST  
 ```/api/registration_picture/:login/:index```  
 И в теле запроса картинка.  
+"SetPicture"
   
 Установка слова для картинки асоциации.  
 POST  
 ```/api/association_word/:login/:index?keyword=""```  
+"SetAssociativeWord"
   
 Установка эталонного обрезка речи для человека.  
 POST  
 ```/api/speech_standard/:login/:index```  
 И в теле запись в.wav формате.  
+"SetSpeechStandard"
   
 Запрос картинки для отображения.  
 GET  
 ```/api/registration_picture/:login/:index```  
 В теле ответа - картинка, как прислали при установке, без изменений.  
+"GetPicture"
   
 Запрос валидности слова/асоциации.  
 POST  
-```/api/association_word/:login/:index?keyword=""```  
+```/api/association_word_check/:login/:index?keyword=""```  
 в теле ответа ```true``` или ```false```  
+"CheckAssociationWord"
   
 Запрос валидности речи по файлику речи  
 POST  
-```/api/speech_standard/:login/:index```  
+```/api/speech_standard_check/:login```  
 И в теле запись в.wav формате.  
 в теле ответа ```true``` или ```false```  
+"CheckSpeech"
