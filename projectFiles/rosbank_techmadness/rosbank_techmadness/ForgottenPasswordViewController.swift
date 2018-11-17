@@ -11,25 +11,37 @@ import UIKit
 
 class ForgottenPasswordViewController: UIViewController {
     
-    @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
+    @IBOutlet weak var CardRecovery: UIView!
+    @IBOutlet weak var AccountRecivery: UIView!
+    @IBOutlet weak var PictureRecovery: UIView!
     @IBAction func ValueChanged(_ sender: UISegmentedControl) {
-        switch segmentControl.selectedSegmentIndex{
+        switch segmentControl.selectedSegmentIndex {
         case 0:
-            myLabel.text = "Женя пидр"
+            CardRecovery.isHidden = false
+            AccountRecivery.isHidden = true
+            PictureRecovery.isHidden = true
         case 1:
-            myLabel.text = "Женя очень пидр"
+            CardRecovery.isHidden = true
+            AccountRecivery.isHidden = false
+            PictureRecovery.isHidden = true
         case 2:
-            myLabel.text = "Женя очень очень пидр"
+            CardRecovery.isHidden = true
+            AccountRecivery.isHidden = true
+            PictureRecovery.isHidden = false
         default:
             break
         }
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        CardRecovery.isHidden = false
+        AccountRecivery.isHidden = true
+        PictureRecovery.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {
