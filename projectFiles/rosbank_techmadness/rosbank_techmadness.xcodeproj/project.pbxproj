@@ -12,6 +12,7 @@
 		1FF4E7B5219FE1BA0020E9CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF4E7B4219FE1BA0020E9CC /* Assets.xcassets */; };
 		1FF4E7B8219FE1BA0020E9CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF4E7B6219FE1BA0020E9CC /* LaunchScreen.storyboard */; };
 		1FF4E7C2219FEE760020E9CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF4E7C1219FEE760020E9CC /* MainViewController.swift */; };
+		D217AA22219FFC63001C42CA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D217AA21219FFC63001C42CA /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1FF4E7B7219FE1BA0020E9CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FF4E7B9219FE1BA0020E9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF4E7C1219FEE760020E9CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D217AA21219FFC63001C42CA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		1FF4E7AC219FE1B70020E9CC /* rosbank_techmadness */ = {
 			isa = PBXGroup;
 			children = (
+				D217AA21219FFC63001C42CA /* Login.storyboard */,
 				1FF4E7AD219FE1B70020E9CC /* AppDelegate.swift */,
 				1FF4E7C1219FEE760020E9CC /* MainViewController.swift */,
 				1FF4E7B1219FE1B70020E9CC /* Main.storyboard */,
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D217AA22219FFC63001C42CA /* Login.storyboard in Resources */,
 				1FF4E7B8219FE1BA0020E9CC /* LaunchScreen.storyboard in Resources */,
 				1FF4E7B5219FE1BA0020E9CC /* Assets.xcassets in Resources */,
 				1FF4E7B3219FE1B70020E9CC /* Main.storyboard in Resources */,
