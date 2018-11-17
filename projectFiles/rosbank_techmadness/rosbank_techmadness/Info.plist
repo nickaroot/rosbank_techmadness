@@ -23,7 +23,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Разрешить доступ к микрофону</string>
+	<string>Разрешить доступ к микрофону?</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Разрешить доступ к распознованию речи?</string>
 	<key>UILaunchStoryboardName</key>
