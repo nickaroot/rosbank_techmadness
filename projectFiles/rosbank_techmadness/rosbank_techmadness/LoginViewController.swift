@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
             entryCounts = entryCounts + 1
             self.performSegue(withIdentifier: "entrySegue", sender: nil)
             reminderAlert()
+            loginTextField.text = ""
+            passwTextField.text = ""
         } else{
             DispatchQueue.main.async {
                 let alertController = UIAlertController(title: "Ошибка при вводе логина/пароля!", message: "", preferredStyle: UIAlertController.Style.alert)

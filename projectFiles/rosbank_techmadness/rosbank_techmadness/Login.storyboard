@@ -27,7 +27,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yHx-p9-kFz">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="vasya_nagibator2018" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yHx-p9-kFz">
                                 <rect key="frame" x="16" y="65" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="yzZ-MT-uM1"/>
@@ -46,7 +46,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="biX-MZ-nFy">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123123123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="biX-MZ-nFy">
                                 <rect key="frame" x="16" y="154" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jc8-6X-Zla"/>
@@ -139,7 +139,7 @@
                         <outlet property="loginTextField" destination="yHx-p9-kFz" id="GIF-1E-gYE"/>
                         <outlet property="passwTextField" destination="biX-MZ-nFy" id="fQC-iE-5sp"/>
                         <segue destination="avB-21-ybq" kind="show" identifier="entrySegue" id="oEJ-UD-jwY"/>
-                        <segue destination="zjU-cJ-RIA" kind="show" identifier="reminderSegue" id="VcM-Td-D81"/>
+                        <segue destination="3C1-MB-Nwh" kind="show" identifier="reminderSegue" id="U09-wj-4NL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Af5-6K-cDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,7 +152,7 @@
                 <viewControllerPlaceholder storyboardName="ForgottenPassword" id="eh5-ke-Ns0" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUw-Ah-Mvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="741" y="-344"/>
+            <point key="canvasLocation" x="659" y="-412"/>
         </scene>
         <!--Результат-->
         <scene sceneID="sBD-ak-CkT">
@@ -180,22 +180,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E45-Ow-6zn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="53"/>
+            <point key="canvasLocation" x="1404" y="27"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="lsp-1y-yQg">
+        <!--PictureStoryBoard-->
+        <scene sceneID="dLj-pB-LxS">
             <objects>
-                <viewController storyboardIdentifier="NextView" id="zjU-cJ-RIA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bO1-w7-r3l">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="QKJ-Q4-XLe"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i62-S8-7KU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="PictureStoryBoard" id="3C1-MB-Nwh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0N-C0-BZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2138" y="53"/>
+            <point key="canvasLocation" x="545" y="485"/>
         </scene>
     </scenes>
 </document>
