@@ -86,6 +86,9 @@
                                 <state key="normal" title="Зарегистрироваться">
                                     <color key="titleColor" red="1" green="0.0093617555430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="YnH-Iz-Zdm" kind="show" id="6Ao-Mu-Ep6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zg-sq-LRU">
                                 <rect key="frame" x="91.5" y="290" width="192" height="30"/>
@@ -181,6 +184,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E45-Ow-6zn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1404" y="27"/>
+        </scene>
+        <!--Registration-->
+        <scene sceneID="BoQ-3s-50F">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Registration" id="YnH-Iz-Zdm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NTy-3P-bgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="202"/>
         </scene>
         <!--PictureStoryBoard-->
         <scene sceneID="dLj-pB-LxS">
