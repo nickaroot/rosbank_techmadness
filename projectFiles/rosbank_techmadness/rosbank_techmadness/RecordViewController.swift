@@ -32,7 +32,15 @@ class RecordViewController: UIViewController {
         recordButton.setImage(UIImage.init(named: "recordButton"), for: .normal)
         recordButton.isHighlighted = false
     }
+    @IBAction func recordButtonDragInside(_ sender: Any) {
+        recordButton.setImage(UIImage.init(named: "recordButtonRed"), for: .normal)
+        recordButton.isHighlighted = false
+    }
     
+    @IBAction func recordButtonDragOut(_ sender: Any) {
+        recordButton.setImage(UIImage.init(named: "recordButtonRed"), for: .normal)
+        recordButton.isHighlighted = false
+    }
     /*
     // MARK: - Navigation
 
