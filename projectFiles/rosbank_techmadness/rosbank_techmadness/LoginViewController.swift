@@ -14,11 +14,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwTextField: UITextField!
     
-    
+    var entryCounts = 0
     
     
     @IBAction func loginButtomAction(_ sender: Any) {
-        var entryCounts = 0
         if checkStatus(){
             entryCounts = entryCounts + 1
             self.performSegue(withIdentifier: "entrySegue", sender: nil)
@@ -62,7 +61,6 @@ class LoginViewController: UIViewController {
     
     func reminderAlert()->Void{
         
-        
             let alert = UIAlertController(title: "Мера безопасности", message: "Хотите вспомнить ассоциацию?", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "Да", style: .default, handler: {action in
                 switch action.style {
@@ -77,7 +75,7 @@ class LoginViewController: UIViewController {
             alert.addAction(defaultAction)
             alert.addAction(UIAlertAction(title: "Позже", style: .default,handler: nil))
             self.present(alert, animated: true, completion: nil)
-       }
         
+    }
 }
 
