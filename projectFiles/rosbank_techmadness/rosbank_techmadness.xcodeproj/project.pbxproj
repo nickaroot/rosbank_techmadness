@@ -10,6 +10,7 @@
 		1F1D1DA021A08D2D00C5D423 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1D1D9F21A08D2D00C5D423 /* Registration.storyboard */; };
 		1F1D1DA221A08DB100C5D423 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D1DA121A08DB100C5D423 /* RegistrationViewController.swift */; };
 		1FB70B8421A0BFDA00FEF914 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB70B8321A0BFDA00FEF914 /* RecordViewController.swift */; };
+		1FB70B8821A0E8D400FEF914 /* Success.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB70B8721A0E8D300FEF914 /* Success.storyboard */; };
 		1FF4E7AE219FE1B70020E9CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF4E7AD219FE1B70020E9CC /* AppDelegate.swift */; };
 		1FF4E7B3219FE1B70020E9CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF4E7B1219FE1B70020E9CC /* Main.storyboard */; };
 		1FF4E7B5219FE1BA0020E9CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF4E7B4219FE1BA0020E9CC /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		1F1D1D9F21A08D2D00C5D423 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		1F1D1DA121A08DB100C5D423 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		1FB70B8321A0BFDA00FEF914 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		1FB70B8721A0E8D300FEF914 /* Success.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Success.storyboard; path = ../../../../../.Trash/Success.storyboard; sourceTree = "<group>"; };
 		1FF4E7AA219FE1B70020E9CC /* rosbank_techmadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rosbank_techmadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF4E7AD219FE1B70020E9CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FF4E7B2219FE1B70020E9CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				1F1D1D9F21A08D2D00C5D423 /* Registration.storyboard */,
 				1F1D1DA121A08DB100C5D423 /* RegistrationViewController.swift */,
 				1FB70B8321A0BFDA00FEF914 /* RecordViewController.swift */,
+				1FB70B8721A0E8D300FEF914 /* Success.storyboard */,
 			);
 			path = rosbank_techmadness;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				1FF4E7B8219FE1BA0020E9CC /* LaunchScreen.storyboard in Resources */,
 				1FF4E7B5219FE1BA0020E9CC /* Assets.xcassets in Resources */,
 				1FF4E7B3219FE1B70020E9CC /* Main.storyboard in Resources */,
+				1FB70B8821A0E8D400FEF914 /* Success.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
