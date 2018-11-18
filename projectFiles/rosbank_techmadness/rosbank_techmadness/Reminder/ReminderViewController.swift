@@ -1,5 +1,5 @@
 //
-//  PictureViewController.swift
+//  ReminderViewController.swift
 //  rosbank_techmadness
 //
 //  Created by Юрий Шашкин on 17/11/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PictureViewController: UIViewController {
+class ReminderViewController: UIViewController {
     
 
     @IBOutlet weak var passView: UIView!
@@ -31,7 +31,9 @@ class PictureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        navigationItem.setHidesBackButton(true, animated: true)
+        hideKeyboardWhenTappedAround()
+        
     }
     
     @IBAction func recordButtonPressed(_ sender: Any) {

@@ -170,7 +170,7 @@
             </objects>
             <point key="canvasLocation" x="940" y="455"/>
         </scene>
-        <!--View Controller-->
+        <!--Регистрация-->
         <scene sceneID="hsn-wy-APn">
             <objects>
                 <viewController id="ON7-Tc-ZfK" sceneMemberID="viewController">
@@ -178,7 +178,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="K0h-hA-Ay4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="K0h-hA-Ay4">
                                 <rect key="frame" x="20" y="72" width="335" height="293"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="K0h-hA-Ay4" secondAttribute="height" multiplier="335:293" id="dU7-FW-Wyp"/>
@@ -224,12 +224,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="32M-zs-slR"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Регистрация" id="6xB-7q-CRX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMO-1Q-SQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2081" y="848"/>
         </scene>
-        <!--View Controller-->
+        <!--Регистрация-->
         <scene sceneID="vzL-Ub-1IK">
             <objects>
                 <viewController id="XYM-5k-lJ5" sceneMemberID="viewController">
@@ -274,20 +275,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MS6-Yn-e91"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Регистрация" id="fOC-n7-TT6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ym-mg-Nau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2828" y="848"/>
         </scene>
-        <!--Данные-->
+        <!--Регистрация-->
         <scene sceneID="S9j-sY-L94">
             <objects>
-                <viewController id="Ezi-yj-AxT" customClass="RecordViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ezi-yj-AxT" customClass="RegistrationRecordViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oLt-XA-Dd8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="G42-ju-gIM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="G42-ju-gIM">
                                 <rect key="frame" x="20" y="72" width="335" height="293"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="G42-ju-gIM" secondAttribute="height" multiplier="335:293" id="5RY-bX-L2P"/>
@@ -306,17 +308,16 @@
                                     <action selector="recordButtonDragOut:" destination="Ezi-yj-AxT" eventType="touchDragOutside" id="ALC-Mt-QIC"/>
                                     <action selector="recordButtonPressed:" destination="Ezi-yj-AxT" eventType="touchUpInside" id="Vcn-3V-kb5"/>
                                     <action selector="recordButtonTouchUp:" destination="Ezi-yj-AxT" eventType="touchUpOutside" id="yRM-Wh-582"/>
-                                    <segue destination="rX4-pw-Dt1" kind="showDetail" id="PEm-HP-b7h"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQe-kx-3Ty">
-                                <rect key="frame" x="112.5" y="536" width="150" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="EHk-p4-Kid"/>
-                                </constraints>
-                                <state key="normal" image="alterRegButton"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZt-qG-o6d">
+                                <rect key="frame" x="122" y="529" width="131" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Другой вариант">
+                                    <color key="titleColor" red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="0.81999999999999995" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="ON7-Tc-ZfK" kind="show" id="DUg-a6-qRa"/>
+                                    <segue destination="ON7-Tc-ZfK" kind="show" id="2wq-no-oOX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -324,42 +325,41 @@
                         <constraints>
                             <constraint firstItem="s9z-fg-lOH" firstAttribute="trailing" secondItem="G42-ju-gIM" secondAttribute="trailing" constant="20" id="2jj-WH-3WX"/>
                             <constraint firstItem="G42-ju-gIM" firstAttribute="top" secondItem="s9z-fg-lOH" secondAttribute="top" constant="52" id="3qu-vx-Ojp"/>
-                            <constraint firstItem="NQe-kx-3Ty" firstAttribute="centerX" secondItem="oLt-XA-Dd8" secondAttribute="centerX" id="JHQ-0R-8RI"/>
+                            <constraint firstItem="s9z-fg-lOH" firstAttribute="bottom" secondItem="FZt-qG-o6d" secondAttribute="bottom" constant="32" id="Erh-He-RJk"/>
                             <constraint firstItem="8PX-fA-C5Z" firstAttribute="centerX" secondItem="oLt-XA-Dd8" secondAttribute="centerX" id="QZ7-vf-cyY"/>
                             <constraint firstItem="G42-ju-gIM" firstAttribute="leading" secondItem="s9z-fg-lOH" secondAttribute="leading" constant="20" id="mni-Wh-x0a"/>
-                            <constraint firstItem="NQe-kx-3Ty" firstAttribute="top" secondItem="8PX-fA-C5Z" secondAttribute="bottom" constant="26" id="tej-Fx-mvs"/>
                             <constraint firstItem="s9z-fg-lOH" firstAttribute="bottom" secondItem="8PX-fA-C5Z" secondAttribute="bottom" constant="84" id="uoD-Ss-Lt9"/>
+                            <constraint firstItem="FZt-qG-o6d" firstAttribute="centerX" secondItem="oLt-XA-Dd8" secondAttribute="centerX" id="xAf-Pm-3aq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s9z-fg-lOH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Данные" id="grK-cq-eBX">
-                        <barButtonItem key="backBarButtonItem" title="Данные" id="5Bi-55-03Z"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Регистрация" id="grK-cq-eBX"/>
                     <connections>
                         <outlet property="imageView" destination="G42-ju-gIM" id="zaq-uC-akm"/>
                         <outlet property="recordButton" destination="8PX-fA-C5Z" id="ahk-nt-UtB"/>
+                        <segue destination="rX4-pw-Dt1" kind="show" identifier="ShowComplete" id="Y72-RU-aoc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBm-Zd-I7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072.8000000000002" y="24.7376311844078"/>
+            <point key="canvasLocation" x="2072.8000000000002" y="24.287856071964018"/>
         </scene>
-        <!--View Controller-->
+        <!--Регистрация-->
         <scene sceneID="ngV-Lv-AnY">
             <objects>
-                <viewController id="rX4-pw-Dt1" sceneMemberID="viewController">
+                <viewController id="rX4-pw-Dt1" customClass="RegistrationCompleteViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kWE-a7-0kg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="l1R-ub-N8N">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="l1R-ub-N8N">
                                 <rect key="frame" x="20" y="72" width="335" height="293"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gba-nc-0Mt">
                                 <rect key="frame" x="20" y="500" width="335" height="49"/>
                                 <state key="normal" image="reRecordButton"/>
                                 <connections>
-                                    <segue destination="Ezi-yj-AxT" kind="showDetail" id="lai-UG-NnY"/>
+                                    <action selector="retryTouchUpInside:" destination="rX4-pw-Dt1" eventType="touchUpInside" id="RLW-TS-sWb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaU-kS-Tz7">
@@ -369,7 +369,7 @@
                                 </constraints>
                                 <state key="normal" image="readyButton"/>
                                 <connections>
-                                    <segue destination="fLd-Am-BIb" kind="show" id="OM9-74-Jje"/>
+                                    <action selector="doneTouchUpInside:" destination="rX4-pw-Dt1" eventType="touchUpInside" id="ukD-bG-ikt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06r-OG-qvW">
@@ -409,10 +409,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ju7-w1-jYO"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Регистрация" id="FJM-tI-QPO"/>
+                    <connections>
+                        <outlet property="doneButton" destination="EaU-kS-Tz7" id="yAB-bj-tub"/>
+                        <outlet property="pictureView" destination="l1R-ub-N8N" id="rbR-W4-xZN"/>
+                        <outlet property="userwordLabel" destination="06r-OG-qvW" id="0QG-iF-Lst"/>
+                        <segue destination="fLd-Am-BIb" kind="show" identifier="ShowLogin" id="qF5-Tx-1UX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32U-3p-QRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="17.541229385307346"/>
+            <point key="canvasLocation" x="2828" y="24"/>
         </scene>
         <!--Login-->
         <scene sceneID="yBC-Wm-TTF">
@@ -526,15 +533,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="alterRegButton" width="132.33332824707031" height="16.333333969116211"/>
+        <image name="0" width="485" height="455"/>
         <image name="reRecordButton" width="335" height="49"/>
         <image name="readyButton" width="335" height="49"/>
         <image name="recordButton" width="76" height="76"/>
-        <image name="sampleImage" width="485" height="455"/>
         <image name="sendMessageButton" width="335" height="49"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hIA-gs-3p0"/>
+        <segue reference="qF5-Tx-1UX"/>
         <segue reference="XHr-FP-eoc"/>
     </inferredMetricsTieBreakers>
 </document>

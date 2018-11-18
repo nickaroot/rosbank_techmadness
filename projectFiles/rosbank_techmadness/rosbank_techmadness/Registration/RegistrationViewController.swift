@@ -30,6 +30,9 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.setHidesBackButton(true, animated: true)
+        hideKeyboardWhenTappedAround()
+        
         cardView.isHidden = false
         accountView.isHidden = true
     }

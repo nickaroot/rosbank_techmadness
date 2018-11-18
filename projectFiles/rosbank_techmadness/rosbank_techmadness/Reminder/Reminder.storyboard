@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ykM-4K-Uuh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ykM-4K-Uuh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Picture View Controller-->
+        <!--Reminder View Controller-->
         <scene sceneID="hqu-78-AhS">
             <objects>
-                <viewController id="ykM-4K-Uuh" customClass="PictureViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ykM-4K-Uuh" customClass="ReminderViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ssl-8b-dSr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,8 +43,8 @@
                                     <segue destination="7uJ-eN-ytS" kind="show" id="tiF-AV-2Ku"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="hRF-Lm-8X3">
-                                <rect key="frame" x="20" y="40" width="335" height="293"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="hRF-Lm-8X3">
+                                <rect key="frame" x="20" y="72" width="335" height="293"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hRF-Lm-8X3" secondAttribute="height" multiplier="335:293" id="XDb-51-aZ8"/>
                                 </constraints>
@@ -54,7 +54,7 @@
                         <constraints>
                             <constraint firstItem="hwr-bF-cr7" firstAttribute="trailing" secondItem="hRF-Lm-8X3" secondAttribute="trailing" constant="20" id="G3t-2a-H9A"/>
                             <constraint firstItem="hwr-bF-cr7" firstAttribute="bottom" secondItem="CHz-G8-hbo" secondAttribute="bottom" constant="84" id="UaD-dv-sCD"/>
-                            <constraint firstItem="hRF-Lm-8X3" firstAttribute="top" secondItem="hwr-bF-cr7" secondAttribute="top" constant="20" id="W6u-FO-Xgj"/>
+                            <constraint firstItem="hRF-Lm-8X3" firstAttribute="top" secondItem="hwr-bF-cr7" secondAttribute="top" constant="52" id="W6u-FO-Xgj"/>
                             <constraint firstItem="vtb-0l-hFw" firstAttribute="centerX" secondItem="ssl-8b-dSr" secondAttribute="centerX" id="g80-ba-aTG"/>
                             <constraint firstItem="CHz-G8-hbo" firstAttribute="centerX" secondItem="ssl-8b-dSr" secondAttribute="centerX" id="grU-oK-Q2E"/>
                             <constraint firstItem="vtb-0l-hFw" firstAttribute="top" secondItem="CHz-G8-hbo" secondAttribute="bottom" constant="26" id="hCs-yP-S7g"/>
@@ -78,7 +78,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="1wK-S1-oTs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="1wK-S1-oTs">
                                 <rect key="frame" x="20" y="72" width="335" height="293"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnB-Xz-iIZ">
@@ -156,7 +156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="rxa-WS-XXE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="rxa-WS-XXE">
                                 <rect key="frame" x="20" y="72" width="335" height="293"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rxa-WS-XXE" secondAttribute="height" multiplier="335:293" id="4QU-Ri-iI5"/>
@@ -215,14 +215,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BaW-zo-bCI">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BaW-zo-bCI">
                                 <rect key="frame" x="82.5" y="65" width="210" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="8Ie-Ut-dww"/>
                                     <constraint firstAttribute="width" constant="210" id="XfB-zt-Rin"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите код из СМС" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWE-N9-N87">
@@ -259,14 +259,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="0" width="485" height="455"/>
         <image name="alterRegButton" width="132.33332824707031" height="16.333333969116211"/>
         <image name="reRecordButton" width="335" height="49"/>
         <image name="readyButton" width="335" height="49"/>
         <image name="recordButton" width="76" height="76"/>
-        <image name="sampleImage" width="485" height="455"/>
         <image name="sendMessageButton" width="335" height="49"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MHX-Mc-jep"/>
+        <segue reference="Rk5-zf-GK9"/>
     </inferredMetricsTieBreakers>
 </document>
