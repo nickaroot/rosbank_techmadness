@@ -20,6 +20,8 @@ class RegistrationViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     var recorder: AVAudioRecorder!
     var filePath: String!
+    var wavData: Data!
+    var association: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,21 +54,9 @@ class RegistrationViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     
-    @IBAction func recordTouchUpInside(_ sender: Any) {
+    @IBAction func recordTouchDown(_ sender: Any) {
         
-        if audioEngine.isRunning {
-            
-            audioEngine.stop()
-            recorder.stop()
-            recognitionRequest?.endAudio()
-            recordButton.isEnabled = false
-            recordButton.setTitle("Start Recording", for: .normal)
-            
-            let file = FileManager.default.contents(atPath: filePath)
-            
-            dump(file)
-            
-        } else {
+        if !audioEngine.isRunning {
             
             let format = DateFormatter()
             format.dateFormat="yyyyMMddHHmmss"
@@ -76,14 +66,32 @@ class RegistrationViewController: UIViewController, SFSpeechRecognizerDelegate {
             filePath = pathArray.joined(separator: "/")
             let fileURL = URL(string: filePath)
             
-            let settings: [String: Any] = [
-                AVAudioFileTypeKey: kAudioFileWAVEType
-            ]
+            let settings: [String: Any] = [AVAudioFileTypeKey: kAudioFileWAVEType]
             
             recorder = try! AVAudioRecorder(url: fileURL!, settings: settings)
             
             startRecording()
-            recordButton.setTitle("Stop Recording", for: .normal)
+            recordButton.setTitle("Стоп", for: .normal)
+            
+        }
+        
+    }
+    
+    @IBAction func recordTouchUpInside(_ sender: Any) {
+        
+        if audioEngine.isRunning {
+            
+            audioEngine.stop()
+            recorder.stop()
+            recognitionRequest?.endAudio()
+            recordButton.isEnabled = false
+            recordButton.setTitle("Запись", for: .normal)
+            
+            wavData = FileManager.default.contents(atPath: filePath)
+            
+            if association != nil && association != "" {
+                performSegue(withIdentifier: "ShowComplete", sender: self)
+            }
             
         }
         
@@ -124,7 +132,16 @@ class RegistrationViewController: UIViewController, SFSpeechRecognizerDelegate {
             if result != nil {
                 
                 let transcription = result?.bestTranscription.formattedString
-                print(transcription)
+                if transcription != nil {
+                    let words = transcription!.split(separator: " ")
+                    if words.count > 0 {
+                        self.association = String(describing: words[0])
+                    } else {
+                        self.association = nil
+                    }
+                } else {
+                    self.association = nil
+                }
                 isFinal = (result?.isFinal)!
             }
             
@@ -168,7 +185,11 @@ class RegistrationViewController: UIViewController, SFSpeechRecognizerDelegate {
             
             let dest = segue.destination as! RegistrationCompleteViewController
             
-            dest.userword = "userword!!!"
+            dest.userword = self.association
+            dest.wavData = self.wavData
+            
+            self.association = nil
+            self.wavData = nil
             
         }
         

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zzq-tH-HQH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zzq-tH-HQH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -147,7 +147,7 @@
             <objects>
                 <viewController id="ON7-Tc-ZfK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fnF-DT-C1H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="K0h-hA-Ay4">
@@ -157,7 +157,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNU-5e-LEn">
-                                <rect key="frame" x="20" y="565" width="335" height="49"/>
+                                <rect key="frame" x="20" y="492" width="335" height="49"/>
                                 <state key="normal" image="sendMessageButton"/>
                                 <connections>
                                     <segue destination="XYM-5k-lJ5" kind="showDetail" id="HKe-kP-QLJ"/>
@@ -206,7 +206,7 @@
             <objects>
                 <viewController id="XYM-5k-lJ5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GUz-hr-gw8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cX2-vp-eGY">
@@ -226,7 +226,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zND-J8-I0W">
-                                <rect key="frame" x="20" y="598" width="335" height="49"/>
+                                <rect key="frame" x="20" y="525" width="335" height="49"/>
                                 <state key="normal" image="readyButton"/>
                                 <connections>
                                     <segue destination="fLd-Am-BIb" kind="show" id="hIA-gs-3p0"/>
@@ -256,7 +256,7 @@
             <objects>
                 <viewController id="Ezi-yj-AxT" customClass="RecordViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oLt-XA-Dd8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="G42-ju-gIM">
@@ -266,7 +266,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PX-fA-C5Z">
-                                <rect key="frame" x="149.5" y="507" width="76" height="76"/>
+                                <rect key="frame" x="149.5" y="434" width="76" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="717-W1-aIg"/>
                                     <constraint firstAttribute="height" constant="76" id="fRJ-Yd-LFv"/>
@@ -282,7 +282,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQe-kx-3Ty">
-                                <rect key="frame" x="112.5" y="609" width="150" height="22"/>
+                                <rect key="frame" x="112.5" y="536" width="150" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="EHk-p4-Kid"/>
                                 </constraints>
@@ -321,21 +321,21 @@
             <objects>
                 <viewController id="rX4-pw-Dt1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kWE-a7-0kg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="l1R-ub-N8N">
                                 <rect key="frame" x="20" y="72" width="335" height="293"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gba-nc-0Mt">
-                                <rect key="frame" x="20" y="573" width="335" height="49"/>
+                                <rect key="frame" x="20" y="500" width="335" height="49"/>
                                 <state key="normal" image="reRecordButton"/>
                                 <connections>
                                     <segue destination="Ezi-yj-AxT" kind="showDetail" id="lai-UG-NnY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaU-kS-Tz7">
-                                <rect key="frame" x="20" y="504" width="335" height="49"/>
+                                <rect key="frame" x="20" y="431" width="335" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EaU-kS-Tz7" secondAttribute="height" multiplier="335:49" id="ncM-wt-moQ"/>
                                 </constraints>
@@ -468,7 +468,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="alterRegButton" width="132.33332824707031" height="16.333333969116211"/>
+        <image name="alterRegButton" width="133" height="17"/>
         <image name="reRecordButton" width="335" height="49"/>
         <image name="readyButton" width="335" height="49"/>
         <image name="recordButton" width="76" height="76"/>
@@ -477,6 +477,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OM9-74-Jje"/>
-        <segue reference="lai-UG-NnY"/>
+        <segue reference="jOq-VZ-am2"/>
     </inferredMetricsTieBreakers>
 </document>

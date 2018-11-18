@@ -12,12 +12,14 @@ protocol APIResponse { }
 
 class API {
     
-    public static var domain: String = "CHANGEDOMAIN_CHANGE_ME_!!!_!_!"
+    private static var domain: String = "http://10.42.0.1:8080"
     
-    public static func getRequest(path: String,
+    private static func getRequest(path: String,
                                   completionHandler: @escaping (_ success: Bool, _ response: Data?) -> Void) {
         
-        let url = URL(string: "\(API.domain)\(path)")!
+        let fullPath = "\(API.domain)\(path)".encodeUrl
+        
+        let url = URL(string: fullPath)!
         let request = URLRequest(url: url)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -37,10 +39,12 @@ class API {
         
     }
     
-    public static func postRequest(path: String, data: Data?,
+    private static func postRequest(path: String, data: Data?,
                                    completionHandler: @escaping (_ success: Bool, _ response: Data?) -> Void) {
         
-        let url = URL(string: "\(API.domain)\(path)")!
+        let fullPath = "\(API.domain)\(path)".encodeUrl
+        
+        let url = URL(string: fullPath)!
         var request = URLRequest(url: url)
         
         request.httpMethod = "POST"
@@ -49,7 +53,6 @@ class API {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             guard let data = data, error == nil else {
-                
                 completionHandler(false, nil)
                 return
                 
@@ -70,14 +73,12 @@ class API {
             
             let path = "/api/registration_picture/\(login)/\(index)"
             
+            print(path)
+            
             API.postRequest(path: path, data: picture.pngData()) { (success, data) in
-                
                 completionHandler(success)
-                return
                 
             }
-            
-            completionHandler(false)
             
         }
         
@@ -88,10 +89,7 @@ class API {
             
             API.postRequest(path: path, data: nil) { (success, data) in
                 completionHandler(success)
-                return
             }
-            
-            completionHandler(false)
             
         }
         
@@ -139,32 +137,44 @@ class API {
             let path = "/api/association_word_check/\(login)/\(index)?keyword=\(word)"
             
             API.postRequest(path: path, data: nil) { (success, data) in
-                completionHandler(success)
-                return
+                
+                if success && data != nil {
+                    let resp = String(data: data!, encoding: .utf8)
+                    if resp == "true" {
+                        completionHandler(true)
+                    }
+                    else {
+                        completionHandler(false)
+                    }
+                }
+                else {
+                    completionHandler(false)
+                }
             }
-            
-            completionHandler(false)
             
         }
         
         class func verifySpeech(login: String, index: Int, speech: Data,
                           completionHandler: @escaping (_ success: Bool, _ speech: Data?) -> Void) {
             
-            let path = "/api/speech_standard_check/\(login)/\(index)"
+            let path = "/api/speech_standard_check/\(login)"
             
-            API.postRequest(path: path, data: nil) { (success, data) in
+            API.postRequest(path: path, data: speech) { (success, data) in
                 
-                guard let data = data else {
+                if success && data != nil {
+                    let resp = String(data: data!, encoding: .utf8)
+                    if resp == "true" {
+                        completionHandler(true, data)
+                    }
+                    else {
+                        completionHandler(false, nil)
+                    }
+                }
+                else {
                     completionHandler(false, nil)
-                    return
                 }
                 
-                completionHandler(success, data)
-                return
-                
             }
-            
-            completionHandler(false, nil)
             
         }
         

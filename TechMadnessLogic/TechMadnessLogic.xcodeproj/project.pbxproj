@@ -17,6 +17,12 @@
 		C34DA8F221A03F0200D5D639 /* TechMadnessLogicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA8F121A03F0200D5D639 /* TechMadnessLogicUITests.swift */; };
 		C34DA90021A03F6300D5D639 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA8FF21A03F6300D5D639 /* API.swift */; };
 		C3746F3C21A0900700FE1B63 /* RegistrationNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3746F3B21A0900700FE1B63 /* RegistrationNavigationViewController.swift */; };
+		C3746F3E21A0D40500FE1B63 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3746F3D21A0D40500FE1B63 /* GradientButton.swift */; };
+		C3746F4321A0D4A900FE1B63 /* LinearGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3746F4221A0D4A900FE1B63 /* LinearGradientBackground.swift */; };
+		C3746F4521A0D4E100FE1B63 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3746F4421A0D4E100FE1B63 /* UIViewExtension.swift */; };
+		C3746F4721A0D91500FE1B63 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3746F4621A0D91500FE1B63 /* PictureView.swift */; };
+		C3746F4921A0E22C00FE1B63 /* URLEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3746F4821A0E22C00FE1B63 /* URLEncoded.swift */; };
+		C3746F4B21A0FF7400FE1B63 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3746F4A21A0FF7400FE1B63 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		C34DA8F321A03F0200D5D639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C34DA8FF21A03F6300D5D639 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C3746F3B21A0900700FE1B63 /* RegistrationNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationNavigationViewController.swift; sourceTree = "<group>"; };
+		C3746F3D21A0D40500FE1B63 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		C3746F4221A0D4A900FE1B63 /* LinearGradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradientBackground.swift; sourceTree = "<group>"; };
+		C3746F4421A0D4E100FE1B63 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		C3746F4621A0D91500FE1B63 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		C3746F4821A0E22C00FE1B63 /* URLEncoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoded.swift; sourceTree = "<group>"; };
+		C3746F4A21A0FF7400FE1B63 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +115,15 @@
 		C34DA8D021A03F0000D5D639 /* TechMadnessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				C3746F4121A0D43000FE1B63 /* Extensions */,
+				C3746F4021A0D42300FE1B63 /* Customs */,
+				C3746F3F21A0D40A00FE1B63 /* Registration */,
 				C34DA8D121A03F0000D5D639 /* AppDelegate.swift */,
-				C34DA8D321A03F0000D5D639 /* RegistrationViewController.swift */,
 				C34DA8D521A03F0000D5D639 /* Main.storyboard */,
 				C34DA8D821A03F0100D5D639 /* Assets.xcassets */,
 				C34DA8DA21A03F0100D5D639 /* LaunchScreen.storyboard */,
 				C34DA8DD21A03F0100D5D639 /* Info.plist */,
 				C34DA8FF21A03F6300D5D639 /* API.swift */,
-				C3393DAA21A079E600D75BE3 /* RegistrationCompleteViewController.swift */,
-				C3746F3B21A0900700FE1B63 /* RegistrationNavigationViewController.swift */,
 			);
 			path = TechMadnessLogic;
 			sourceTree = "<group>";
@@ -132,6 +144,36 @@
 				C34DA8F321A03F0200D5D639 /* Info.plist */,
 			);
 			path = TechMadnessLogicUITests;
+			sourceTree = "<group>";
+		};
+		C3746F3F21A0D40A00FE1B63 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				C34DA8D321A03F0000D5D639 /* RegistrationViewController.swift */,
+				C3393DAA21A079E600D75BE3 /* RegistrationCompleteViewController.swift */,
+				C3746F3B21A0900700FE1B63 /* RegistrationNavigationViewController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		C3746F4021A0D42300FE1B63 /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				C3746F3D21A0D40500FE1B63 /* GradientButton.swift */,
+				C3746F4621A0D91500FE1B63 /* PictureView.swift */,
+				C3746F4A21A0FF7400FE1B63 /* RoundedButton.swift */,
+			);
+			path = Customs;
+			sourceTree = "<group>";
+		};
+		C3746F4121A0D43000FE1B63 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C3746F4221A0D4A900FE1B63 /* LinearGradientBackground.swift */,
+				C3746F4421A0D4E100FE1B63 /* UIViewExtension.swift */,
+				C3746F4821A0E22C00FE1B63 /* URLEncoded.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3746F4921A0E22C00FE1B63 /* URLEncoded.swift in Sources */,
+				C3746F4721A0D91500FE1B63 /* PictureView.swift in Sources */,
 				C3393DAB21A079E600D75BE3 /* RegistrationCompleteViewController.swift in Sources */,
+				C3746F3E21A0D40500FE1B63 /* GradientButton.swift in Sources */,
 				C34DA90021A03F6300D5D639 /* API.swift in Sources */,
 				C34DA8D421A03F0000D5D639 /* RegistrationViewController.swift in Sources */,
+				C3746F4B21A0FF7400FE1B63 /* RoundedButton.swift in Sources */,
 				C3746F3C21A0900700FE1B63 /* RegistrationNavigationViewController.swift in Sources */,
+				C3746F4321A0D4A900FE1B63 /* LinearGradientBackground.swift in Sources */,
+				C3746F4521A0D4E100FE1B63 /* UIViewExtension.swift in Sources */,
 				C34DA8D221A03F0000D5D639 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
