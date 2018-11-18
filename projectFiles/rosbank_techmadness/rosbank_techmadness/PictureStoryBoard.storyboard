@@ -157,7 +157,7 @@
                                 <rect key="frame" x="20" y="598" width="335" height="49"/>
                                 <state key="normal" image="readyButton"/>
                                 <connections>
-                                    <segue destination="O9U-Mc-RoI" kind="show" id="2OG-eQ-64D"/>
+                                    <segue destination="O9U-Mc-RoI" kind="showDetail" id="2OG-eQ-64D"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -204,7 +204,7 @@
                                 </constraints>
                                 <state key="normal" image="readyButton"/>
                                 <connections>
-                                    <segue destination="O9U-Mc-RoI" kind="show" id="VKL-AS-MRE"/>
+                                    <segue destination="O9U-Mc-RoI" kind="showDetail" id="VKL-AS-MRE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIw-l8-vbc">
@@ -267,6 +267,6 @@
         <image name="sendMessageButton" width="335" height="49"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VKL-AS-MRE"/>
+        <segue reference="2OG-eQ-64D"/>
     </inferredMetricsTieBreakers>
 </document>

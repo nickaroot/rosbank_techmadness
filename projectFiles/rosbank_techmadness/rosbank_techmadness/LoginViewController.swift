@@ -14,10 +14,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwTextField: UITextField!
     
-    var entryCounts = 0
+    
     
     
     @IBAction func loginButtomAction(_ sender: Any) {
+        var entryCounts = 0
         if checkStatus(){
             entryCounts = entryCounts + 1
             self.performSegue(withIdentifier: "entrySegue", sender: nil)
