@@ -157,7 +157,7 @@
                                 <rect key="frame" x="20" y="598" width="335" height="49"/>
                                 <state key="normal" image="readyButton"/>
                                 <connections>
-                                    <segue destination="O9U-Mc-RoI" kind="showDetail" id="2OG-eQ-64D"/>
+                                    <segue destination="XhK-M0-s1f" kind="showDetail" id="ee8-KR-qf2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -204,7 +204,7 @@
                                 </constraints>
                                 <state key="normal" image="readyButton"/>
                                 <connections>
-                                    <segue destination="O9U-Mc-RoI" kind="showDetail" id="VKL-AS-MRE"/>
+                                    <segue destination="XhK-M0-s1f" kind="showDetail" id="Fu4-bK-Dss"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIw-l8-vbc">
@@ -249,13 +249,99 @@
             </objects>
             <point key="canvasLocation" x="1166" y="86"/>
         </scene>
-        <!--Success-->
-        <scene sceneID="Y0y-S1-KhO">
+        <!--title-->
+        <scene sceneID="3ic-gW-6zd">
             <objects>
-                <viewControllerPlaceholder storyboardName="Success" id="O9U-Mc-RoI" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vjl-Re-Gze" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Main" id="XhK-M0-s1f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TWC-tl-wsx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы успешно сбросили пароль!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zQ-0G-yzC">
+                                <rect key="frame" x="25" y="89" width="325" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0093617555430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjL-gQ-xEZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem id="gKd-Pv-ICA"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите новый пароль:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsN-T9-46c">
+                                <rect key="frame" x="25" y="160" width="325" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0093617555430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yg1-3N-Kxy">
+                                <rect key="frame" x="25" y="201" width="325" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Повторите введенный пароль:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7A-fN-Hub">
+                                <rect key="frame" x="25" y="256" width="325" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0093617555430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c9L-0x-VWQ">
+                                <rect key="frame" x="25" y="297" width="325" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioE-rJ-1Sw">
+                                <rect key="frame" x="20" y="598" width="335" height="49"/>
+                                <state key="normal" title="Button" image="readyButton"/>
+                                <connections>
+                                    <segue destination="S2X-Ke-BH8" kind="showDetail" id="W1t-ac-Iqo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ioE-rJ-1Sw" firstAttribute="leading" secondItem="hJ7-1c-gEO" secondAttribute="leading" constant="20" id="0kl-Zk-wBT"/>
+                            <constraint firstItem="LsN-T9-46c" firstAttribute="leading" secondItem="hJ7-1c-gEO" secondAttribute="leading" constant="25" id="0y0-HV-paV"/>
+                            <constraint firstItem="hJ7-1c-gEO" firstAttribute="trailing" secondItem="c9L-0x-VWQ" secondAttribute="trailing" constant="25" id="3LT-z3-gO7"/>
+                            <constraint firstItem="1zQ-0G-yzC" firstAttribute="leading" secondItem="hJ7-1c-gEO" secondAttribute="leading" constant="25" id="4T2-wZ-83g"/>
+                            <constraint firstItem="1zQ-0G-yzC" firstAttribute="centerX" secondItem="TWC-tl-wsx" secondAttribute="centerX" id="7Yn-VE-zPq"/>
+                            <constraint firstItem="1zQ-0G-yzC" firstAttribute="top" secondItem="IjL-gQ-xEZ" secondAttribute="bottom" constant="25" id="9wP-gm-bFW"/>
+                            <constraint firstItem="hJ7-1c-gEO" firstAttribute="trailing" secondItem="ioE-rJ-1Sw" secondAttribute="trailing" constant="20" id="AIf-Vr-GIH"/>
+                            <constraint firstItem="hJ7-1c-gEO" firstAttribute="bottom" secondItem="ioE-rJ-1Sw" secondAttribute="bottom" constant="20" id="Dld-lf-64K"/>
+                            <constraint firstItem="K7A-fN-Hub" firstAttribute="top" secondItem="Yg1-3N-Kxy" secondAttribute="bottom" constant="25" id="EZf-vk-12E"/>
+                            <constraint firstItem="IjL-gQ-xEZ" firstAttribute="leading" secondItem="hJ7-1c-gEO" secondAttribute="leading" id="Fcn-2R-CCd"/>
+                            <constraint firstItem="IjL-gQ-xEZ" firstAttribute="trailing" secondItem="hJ7-1c-gEO" secondAttribute="trailing" id="HPt-rY-0ds"/>
+                            <constraint firstItem="c9L-0x-VWQ" firstAttribute="leading" secondItem="hJ7-1c-gEO" secondAttribute="leading" constant="25" id="Hda-ky-F9n"/>
+                            <constraint firstItem="hJ7-1c-gEO" firstAttribute="trailing" secondItem="1zQ-0G-yzC" secondAttribute="trailing" constant="25" id="Iag-Mf-7nI"/>
+                            <constraint firstItem="Yg1-3N-Kxy" firstAttribute="top" secondItem="LsN-T9-46c" secondAttribute="bottom" constant="20" id="Kde-Aq-sdV"/>
+                            <constraint firstItem="IjL-gQ-xEZ" firstAttribute="top" secondItem="hJ7-1c-gEO" secondAttribute="top" id="MxZ-Ga-Sl9"/>
+                            <constraint firstItem="hJ7-1c-gEO" firstAttribute="trailing" secondItem="K7A-fN-Hub" secondAttribute="trailing" constant="25" id="UkG-nt-S3c"/>
+                            <constraint firstItem="K7A-fN-Hub" firstAttribute="leading" secondItem="hJ7-1c-gEO" secondAttribute="leading" constant="25" id="aVM-ma-obI"/>
+                            <constraint firstItem="hJ7-1c-gEO" firstAttribute="trailing" secondItem="Yg1-3N-Kxy" secondAttribute="trailing" constant="25" id="if9-Ov-rnJ"/>
+                            <constraint firstItem="c9L-0x-VWQ" firstAttribute="top" secondItem="K7A-fN-Hub" secondAttribute="bottom" constant="20" id="l7I-MP-k5a"/>
+                            <constraint firstItem="LsN-T9-46c" firstAttribute="top" secondItem="1zQ-0G-yzC" secondAttribute="bottom" constant="50" id="oxW-mT-b5x"/>
+                            <constraint firstItem="hJ7-1c-gEO" firstAttribute="trailing" secondItem="LsN-T9-46c" secondAttribute="trailing" constant="25" id="srj-ed-hOG"/>
+                            <constraint firstItem="Yg1-3N-Kxy" firstAttribute="leading" secondItem="hJ7-1c-gEO" secondAttribute="leading" constant="25" id="vYJ-4e-qyx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hJ7-1c-gEO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="title" id="2LA-Gw-d7L"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DVG-oj-H1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1925" y="467"/>
+            <point key="canvasLocation" x="2410" y="86"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="7Qw-Q5-I7X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="S2X-Ke-BH8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4W-ev-iq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3067" y="66"/>
         </scene>
     </scenes>
     <resources>
@@ -267,6 +353,6 @@
         <image name="sendMessageButton" width="335" height="49"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2OG-eQ-64D"/>
+        <segue reference="ee8-KR-qf2"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -65,7 +65,7 @@ class LoginViewController: UIViewController {
     func reminderAlert()->Void{
         
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Мера безопасности", message: "Хотите вспомнить ассоциацию?", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Мера безопасности", message: "Хотите вспомнить ассоциацию?", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "Да", style: .default, handler: {action in
                 switch action.style {
                 case .default:
