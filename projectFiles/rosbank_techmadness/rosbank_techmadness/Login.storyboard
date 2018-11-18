@@ -126,7 +126,7 @@
                         <outlet property="EntryNav" destination="7Cf-H0-Dhb" id="YYv-Bf-sjt"/>
                         <outlet property="loginTextField" destination="yHx-p9-kFz" id="GIF-1E-gYE"/>
                         <outlet property="passwTextField" destination="biX-MZ-nFy" id="fQC-iE-5sp"/>
-                        <segue destination="3C1-MB-Nwh" kind="show" identifier="reminderSegue" id="U09-wj-4NL"/>
+                        <segue destination="JT4-vC-zAv" kind="show" identifier="reminderSegue" id="0Cq-91-4Fu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Af5-6K-cDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,13 +149,13 @@
             </objects>
             <point key="canvasLocation" x="740" y="202"/>
         </scene>
-        <!--PictureStoryBoard-->
-        <scene sceneID="dLj-pB-LxS">
+        <!--reminder-->
+        <scene sceneID="Bay-n1-OsD">
             <objects>
-                <viewControllerPlaceholder storyboardName="PictureStoryBoard" id="3C1-MB-Nwh" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c0N-C0-BZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="reminderSegue" storyboardName="reminder" id="JT4-vC-zAv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iso-hC-uMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="485"/>
+            <point key="canvasLocation" x="170" y="491"/>
         </scene>
         <!--title-->
         <scene sceneID="ndb-TE-Jbr">
