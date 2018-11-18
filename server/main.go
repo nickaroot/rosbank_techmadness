@@ -13,7 +13,7 @@ import (
 
 func main() {
 	// Установка соединения к базе.
-	_db, err := sql.Open("postgres", "postgres://postgres:@localhost/password_change?sslmode=disable")
+	_db, err := sql.Open("postgres", "postgres://oleg:oleg@localhost/oleg?sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}

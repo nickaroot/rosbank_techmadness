@@ -4,6 +4,7 @@ import (
 	"github.com/nickaroot/rosbank_techmadness/server/accessor"
 	"github.com/nickaroot/rosbank_techmadness/server/ml_magic"
 	"github.com/valyala/fasthttp"
+	"log"
 	"net/http"
 	"strconv"
 )
@@ -13,6 +14,8 @@ type Env struct {
 }
 
 func (e *Env) SetPicture(ctx *fasthttp.RequestCtx) {
+	log.Print("in: ", accessor.FunctionName(), " with url: ", string(ctx.Request.URI().FullURI()), " with body: ", ctx.Request.Body())
+
 	login := ctx.UserValue("login").(string)
 	index, err := strconv.Atoi(ctx.UserValue("index").(string))
 	if err != nil {
@@ -32,6 +35,8 @@ func (e *Env) SetPicture(ctx *fasthttp.RequestCtx) {
 }
 
 func (e *Env) SetAssociativeWord(ctx *fasthttp.RequestCtx) {
+	log.Print("in: ", accessor.FunctionName(), " with url: ", string(ctx.Request.URI().FullURI()), " with body: ", ctx.Request.Body())
+
 	login := ctx.UserValue("login").(string)
 	index, err := strconv.Atoi(ctx.UserValue("index").(string))
 	if err != nil {
@@ -55,6 +60,8 @@ func (e *Env) SetAssociativeWord(ctx *fasthttp.RequestCtx) {
 }
 
 func (e *Env) GetPicture(ctx *fasthttp.RequestCtx) {
+	log.Print("in: ", accessor.FunctionName(), " with url: ", string(ctx.Request.URI().FullURI()), " with body: ", ctx.Request.Body())
+
 	login := ctx.UserValue("login").(string)
 	index, err := strconv.Atoi(ctx.UserValue("index").(string))
 	if err != nil {
@@ -74,6 +81,8 @@ func (e *Env) GetPicture(ctx *fasthttp.RequestCtx) {
 }
 
 func (e *Env) SetSpeechStandard(ctx *fasthttp.RequestCtx) {
+	log.Print("in: ", accessor.FunctionName(), " with url: ", string(ctx.Request.URI().FullURI()), " with body: ", ctx.Request.Body())
+
 	login := ctx.UserValue("login").(string)
 	index, err := strconv.Atoi(ctx.UserValue("index").(string))
 	if err != nil {
@@ -94,6 +103,7 @@ func (e *Env) SetSpeechStandard(ctx *fasthttp.RequestCtx) {
 }
 
 func (e *Env) CheckAssociationWord(ctx *fasthttp.RequestCtx) {
+	log.Print("in: ", accessor.FunctionName(), " with url: ", string(ctx.Request.URI().FullURI()), " with body: ", ctx.Request.Body())
 	login := ctx.UserValue("login").(string)
 	index, err := strconv.Atoi(ctx.UserValue("index").(string))
 	if err != nil {
@@ -122,8 +132,9 @@ func (e *Env) CheckAssociationWord(ctx *fasthttp.RequestCtx) {
 }
 
 func (e *Env) CheckSpeech(ctx *fasthttp.RequestCtx) {
-	login := ctx.UserValue("login").(string)
+	log.Print("in: ", accessor.FunctionName(), " with url: ", string(ctx.Request.URI().FullURI()), " with body: ", ctx.Request.Body())
 
+	login := ctx.UserValue("login").(string)
 	err, voiceSamples := e.Db.GetSpeech(login)
 	if err != nil {
 		ctx.WriteString("error in: " + accessor.FunctionName() + " : " + err.Error())

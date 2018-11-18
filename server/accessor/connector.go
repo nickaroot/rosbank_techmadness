@@ -28,18 +28,19 @@ create table if not exists "registration_picture"(
     "login" text not null,
 	"index" integer not null,
     "picture" bytea not null,
-	"association_word" text
-);
+	"association_word" text,
 
-create unique index if not exists "registration_picture_pk" on "registration_picture"("login", "index"); 
+	constraint "registration_picture_unique" unique ("login", "index")
+);
 
 create table if not exists "speech" (
     "login" text not null,
     "index" integer not null,
-    "sound_recording" bytea not null
+    "sound_recording" bytea not null,
+
+	constraint "speech_unique" unique ("login", "index")
 );
 
-create unique index if not exists "speech_pk" on "speech"("login", "index");
 commit;
 `
 	_, err = db.Exec(sql)
@@ -62,11 +63,8 @@ insert into "registration_picture"(
     "picture"
 ) values (
     $1, $2, $3
-) on conflict do update set 
-	"picture" = $3
-where
-    "login" = $1 &&
-	"index" = $2
+) on conflict ("login", "index") do update set 
+	"picture" = EXCLUDED."picture"
 ;`
 	_, err = db.Exec(sql, login, index, picture)
 	if err != err {
@@ -86,7 +84,7 @@ update
 set 
     "association_word" = $3
 where
-    "login" = $1 &&
+    "login" = $1 and
 	"index" = $2
 ;`
 	result, err := db.Exec(sql, login, index, associativeWord)
@@ -114,11 +112,8 @@ insert into "speech" (
     "sound_recording"
 ) values (
     $1, $2, $3
-) on conflict do update set 
-    "sound_recording" = $3
-where 
-	"login" = $1 &&
-    "index" = $2
+) on conflict ("login", "index") do update set 
+    "sound_recording" = excluded."sound_recording"
 ;`
 	_, err = db.Exec(sql, login, index, speech)
 	if err != nil {
@@ -139,7 +134,7 @@ select
 from
     "registration_picture"
 where 
-    "login" = $1 &&
+    "login" = $1 and
     "index" = $2
 ;`
 	err = db.QueryRow(sql, login, index).Scan(&picture)
@@ -160,7 +155,7 @@ select
 from
     "registration_picture"
 where
-    "login" = $1 &&
+    "login" = $1 and
 	"index" = $2
 ;`
 	realAssociationWord := ""
