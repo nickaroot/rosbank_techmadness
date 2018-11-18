@@ -26,11 +26,9 @@ class LoginViewController: UIViewController {
             loginTextField.text = ""
             passwTextField.text = ""
         } else{
-            DispatchQueue.main.async {
                 let alertController = UIAlertController(title: "Ошибка при вводе логина/пароля!", message: "", preferredStyle: UIAlertController.Style.alert)
                 alertController.addAction(UIAlertAction(title: "Ок", style: UIAlertAction.Style.default,handler: nil))
                 self.present(alertController, animated: true, completion: nil)
-            }
         }
         
     }
@@ -64,7 +62,7 @@ class LoginViewController: UIViewController {
     
     func reminderAlert()->Void{
         
-        DispatchQueue.main.async {
+        
             let alert = UIAlertController(title: "Мера безопасности", message: "Хотите вспомнить ассоциацию?", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "Да", style: .default, handler: {action in
                 switch action.style {
@@ -81,6 +79,5 @@ class LoginViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
        }
         
-    }
 }
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wV4-P0-fJX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wV4-P0-fJX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,7 +45,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtomAction:" destination="wV4-P0-fJX" eventType="touchUpInside" id="7DU-YK-6fZ"/>
-                                    <segue destination="HfH-F9-duG" kind="show" identifier="entrySegue" id="XA4-QA-qrx"/>
+                                    <segue destination="HfH-F9-duG" kind="showDetail" identifier="entrySegue" id="XA4-QA-qrx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6J-md-kso">
@@ -86,9 +86,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zg-sq-LRU">
                                 <rect key="frame" x="19" y="251" width="335" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="spq-oG-TGU"/>
-                                </constraints>
                                 <state key="normal" image="PasswordButton">
                                     <color key="titleColor" red="1" green="0.0093617555427757404" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -103,7 +100,6 @@
                             <constraint firstItem="2UM-ql-z2G" firstAttribute="leading" secondItem="xZS-nl-MTd" secondAttribute="leadingMargin" constant="25" id="6he-2i-6Bt"/>
                             <constraint firstItem="7il-9v-Ib6" firstAttribute="leading" secondItem="dFS-cB-UwZ" secondAttribute="leading" constant="19" id="6uk-Re-ZpQ"/>
                             <constraint firstItem="1Zg-sq-LRU" firstAttribute="leading" secondItem="dFS-cB-UwZ" secondAttribute="leading" constant="19" id="6vq-Q4-anc"/>
-                            <constraint firstItem="7il-9v-Ib6" firstAttribute="centerX" secondItem="xZS-nl-MTd" secondAttribute="centerX" id="7i2-1u-w2j"/>
                             <constraint firstItem="yHx-p9-kFz" firstAttribute="leading" secondItem="dFS-cB-UwZ" secondAttribute="leading" constant="30" id="9iT-7m-DKZ"/>
                             <constraint firstItem="2UM-ql-z2G" firstAttribute="top" secondItem="yHx-p9-kFz" secondAttribute="bottom" constant="5" id="AiV-7g-vDF"/>
                             <constraint firstItem="lHw-J7-hfp" firstAttribute="top" secondItem="biX-MZ-nFy" secondAttribute="bottom" constant="5" id="BSj-Zx-x5X"/>
@@ -112,15 +108,10 @@
                             <constraint firstItem="7il-9v-Ib6" firstAttribute="top" secondItem="1Zg-sq-LRU" secondAttribute="bottom" constant="20" id="Hh8-6P-bTj"/>
                             <constraint firstItem="1Zg-sq-LRU" firstAttribute="top" secondItem="lHw-J7-hfp" secondAttribute="bottom" constant="65" id="ICN-U4-TF2"/>
                             <constraint firstItem="lHw-J7-hfp" firstAttribute="centerX" secondItem="xZS-nl-MTd" secondAttribute="centerX" id="Ibs-Dh-EJd"/>
-                            <constraint firstItem="biX-MZ-nFy" firstAttribute="centerX" secondItem="xZS-nl-MTd" secondAttribute="centerX" id="Jtt-Ab-XQ5"/>
                             <constraint firstItem="B6J-md-kso" firstAttribute="top" secondItem="7il-9v-Ib6" secondAttribute="bottom" constant="20" id="Nyg-C5-i52"/>
-                            <constraint firstItem="1Zg-sq-LRU" firstAttribute="centerX" secondItem="xZS-nl-MTd" secondAttribute="centerX" id="Oyc-FR-yQy"/>
                             <constraint firstItem="dFS-cB-UwZ" firstAttribute="trailing" secondItem="7il-9v-Ib6" secondAttribute="trailing" constant="19" id="PMw-3C-Ib7"/>
-                            <constraint firstItem="B6J-md-kso" firstAttribute="centerX" secondItem="xZS-nl-MTd" secondAttribute="centerX" id="Vnd-Bd-Chy"/>
-                            <constraint firstItem="lHw-J7-hfp" firstAttribute="leading" secondItem="xZS-nl-MTd" secondAttribute="leadingMargin" constant="25" id="Vni-qe-ffQ"/>
                             <constraint firstItem="dFS-cB-UwZ" firstAttribute="trailing" secondItem="B6J-md-kso" secondAttribute="trailing" constant="19" id="Zbo-Yg-dih"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lHw-J7-hfp" secondAttribute="trailing" constant="25" id="aJq-uF-1Bi"/>
-                            <constraint firstItem="yHx-p9-kFz" firstAttribute="centerX" secondItem="xZS-nl-MTd" secondAttribute="centerX" id="bx5-dJ-zuX"/>
                             <constraint firstItem="dFS-cB-UwZ" firstAttribute="trailing" secondItem="yHx-p9-kFz" secondAttribute="trailing" constant="30" id="e1w-3X-TnE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2UM-ql-z2G" secondAttribute="trailing" constant="25" id="hBK-GI-L7F"/>
                             <constraint firstItem="dFS-cB-UwZ" firstAttribute="trailing" secondItem="biX-MZ-nFy" secondAttribute="trailing" constant="30" id="lCr-hO-tsZ"/>
