@@ -3,9 +3,9 @@ package main
 import (
 	"database/sql"
 	"github.com/buaazp/fasthttprouter"
+	_ "github.com/lib/pq"
 	"github.com/valyala/fasthttp"
 	"log"
-	_ "github.com/lib/pq"
 
 	"github.com/nickaroot/rosbank_techmadness/server/accessor"
 	"github.com/nickaroot/rosbank_techmadness/server/handlers"
@@ -13,7 +13,7 @@ import (
 
 func main() {
 	// Установка соединения к базе.
-	_db, err := sql.Open("postgres", "postgres://postgres:@localhost/password_change?sslmode=disable")
+	_db, err := sql.Open("postgres", "postgres://oleg:oleg@localhost/oleg?sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -40,4 +40,5 @@ func main() {
 	router.POST("/api/speech_standard_check/:login", env.CheckSpeech)
 	log.Print("Start listening in at http://[::1]:8080")
 	log.Fatal(fasthttp.ListenAndServe(":8080", router.Handler))
+	return
 }

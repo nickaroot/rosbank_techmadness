@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"github.com/liuxp0827/govpr"
 	"github.com/liuxp0827/govpr/log"
+	"github.com/nickaroot/rosbank_techmadness/server/accessor"
+	"github.com/pkg/errors"
 	"io"
 )
 
@@ -115,7 +117,9 @@ func WaveLoad(r io.Reader) ([]byte, error) {
 func CompareVoise(referenceValues [][]byte, checkedValue []byte) (match bool, err error){
 	vprEngine, err := NewEngine(16000, 50, "./ml_magic/model/ubm/ubm", "./ml_magic/model/test.dat")
 	if err != nil {
-		log.Fatal(err)
+		err = errors.Wrap(err, "in " + accessor.FunctionName())
+		log.Error(err)
+		return
 	}
 
 	for i, value := range referenceValues {
@@ -124,19 +128,25 @@ func CompareVoise(referenceValues [][]byte, checkedValue []byte) (match bool, er
 
 	err = vprEngine.TrainSpeech(referenceValues)
 	if err != nil {
-		log.Fatal(err)
+		err = errors.Wrap(err, "in " + accessor.FunctionName())
+		log.Error(err)
+		return
 	}
 
 	var threshold = 0.8
 
 	selfVerifyBuffer, err := WaveLoad(bytes.NewReader(checkedValue))
 	if err != nil {
-		log.Fatal(err)
+		err = errors.Wrap(err, "in " + accessor.FunctionName())
+		log.Error(err)
+		return
 	}
 
 	selfScore, err := vprEngine.RecSpeech(selfVerifyBuffer)
 	if err != nil {
-		log.Fatal(err)
+		err = errors.Wrap(err, "in " + accessor.FunctionName())
+		log.Error(err)
+		return
 	}
 
 	match = selfScore >= threshold
