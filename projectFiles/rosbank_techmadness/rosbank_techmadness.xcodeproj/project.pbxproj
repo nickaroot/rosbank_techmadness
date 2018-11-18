@@ -16,6 +16,9 @@
 		1FF4E7B5219FE1BA0020E9CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF4E7B4219FE1BA0020E9CC /* Assets.xcassets */; };
 		1FF4E7B8219FE1BA0020E9CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF4E7B6219FE1BA0020E9CC /* LaunchScreen.storyboard */; };
 		1FF4E7C2219FEE760020E9CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF4E7C1219FEE760020E9CC /* MainViewController.swift */; };
+		C308CD2221A1680A00443F84 /* ReminderRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C308CD2021A1680900443F84 /* ReminderRecordViewController.swift */; };
+		C308CD2321A1680A00443F84 /* ReminderCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C308CD2121A1680A00443F84 /* ReminderCompleteViewController.swift */; };
+		C308CD2521A1708500443F84 /* RecoveryNewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C308CD2421A1708500443F84 /* RecoveryNewLoginViewController.swift */; };
 		D217AA22219FFC63001C42CA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D217AA21219FFC63001C42CA /* Login.storyboard */; };
 		D217AA24219FFDA6001C42CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217AA23219FFDA6001C42CA /* LoginViewController.swift */; };
 		D217AA3221A045F3001C42CA /* Recovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D217AA3121A045F3001C42CA /* Recovery.storyboard */; };
@@ -43,6 +46,9 @@
 		1FF4E7B7219FE1BA0020E9CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FF4E7B9219FE1BA0020E9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF4E7C1219FEE760020E9CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C308CD2021A1680900443F84 /* ReminderRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRecordViewController.swift; sourceTree = "<group>"; };
+		C308CD2121A1680A00443F84 /* ReminderCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCompleteViewController.swift; sourceTree = "<group>"; };
+		C308CD2421A1708500443F84 /* RecoveryNewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryNewLoginViewController.swift; sourceTree = "<group>"; };
 		D217AA21219FFC63001C42CA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D217AA23219FFDA6001C42CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D217AA3121A045F3001C42CA /* Recovery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recovery.storyboard; sourceTree = "<group>"; };
@@ -122,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				D2F7735321A141FD00F96182 /* ReminderViewController.swift */,
+				C308CD2021A1680900443F84 /* ReminderRecordViewController.swift */,
+				C308CD2121A1680A00443F84 /* ReminderCompleteViewController.swift */,
 				1FE6B47B21A121A900CE2095 /* Reminder.storyboard */,
 			);
 			path = Reminder;
@@ -143,6 +151,7 @@
 				D2F7735F21A15C2300F96182 /* RecoveryRecordViewController.swift */,
 				D2F7735E21A15C2300F96182 /* RecoveryCompleteViewController.swift */,
 				D217AA3121A045F3001C42CA /* Recovery.storyboard */,
+				C308CD2421A1708500443F84 /* RecoveryNewLoginViewController.swift */,
 			);
 			path = Recovery;
 			sourceTree = "<group>";
@@ -232,11 +241,14 @@
 			files = (
 				D2F7734C21A12C9F00F96182 /* URLEncoded.swift in Sources */,
 				1F1D1DA221A08DB100C5D423 /* RegistrationViewController.swift in Sources */,
+				C308CD2221A1680A00443F84 /* ReminderRecordViewController.swift in Sources */,
 				D2F7736321A164C600F96182 /* KeyboardDismissUIViewControllerExtension.swift in Sources */,
+				C308CD2521A1708500443F84 /* RecoveryNewLoginViewController.swift in Sources */,
 				D2F7736121A15C2400F96182 /* RecoveryRecordViewController.swift in Sources */,
 				D217AA24219FFDA6001C42CA /* LoginViewController.swift in Sources */,
 				D2F7735721A1432800F96182 /* Logic.swift in Sources */,
 				1FF4E7C2219FEE760020E9CC /* MainViewController.swift in Sources */,
+				C308CD2321A1680A00443F84 /* ReminderCompleteViewController.swift in Sources */,
 				D2F7735421A141FD00F96182 /* ReminderViewController.swift in Sources */,
 				1FB70B8421A0BFDA00FEF914 /* RegistrationRecordViewController.swift in Sources */,
 				1FF4E7AE219FE1B70020E9CC /* AppDelegate.swift in Sources */,
@@ -391,13 +403,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 984G43HA9J;
+				DEVELOPMENT_TEAM = Y7BEBZQYA6;
 				INFOPLIST_FILE = rosbank_techmadness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "bmstu.rosbank-techmadness8";
+				PRODUCT_BUNDLE_IDENTIFIER = "nickaroot.rosbank-techmadness";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,13 +421,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 984G43HA9J;
+				DEVELOPMENT_TEAM = Y7BEBZQYA6;
 				INFOPLIST_FILE = rosbank_techmadness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "bmstu.rosbank-techmadness8";
+				PRODUCT_BUNDLE_IDENTIFIER = "nickaroot.rosbank-techmadness";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Reminder View Controller-->
+        <!--Reminder Record View Controller-->
         <scene sceneID="hqu-78-AhS">
             <objects>
-                <viewController id="ykM-4K-Uuh" customClass="ReminderViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ykM-4K-Uuh" customClass="ReminderRecordViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ssl-8b-dSr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,6 @@
                                     <action selector="recordButtonDragOut:" destination="ykM-4K-Uuh" eventType="touchDragOutside" id="SeS-fo-yTs"/>
                                     <action selector="recordButtonPressed:" destination="ykM-4K-Uuh" eventType="touchUpInside" id="EaW-CP-jRG"/>
                                     <action selector="recordButtonTouchUp:" destination="ykM-4K-Uuh" eventType="touchUpOutside" id="hxV-3i-3mW"/>
-                                    <segue destination="wsf-dx-fyk" kind="showDetail" id="X6e-ze-HEU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtb-0l-hFw">
@@ -63,17 +62,19 @@
                         <viewLayoutGuide key="safeArea" id="hwr-bF-cr7"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="hRF-Lm-8X3" id="uNY-mT-eml"/>
                         <outlet property="recordButton" destination="CHz-G8-hbo" id="F3S-6c-vuM"/>
+                        <segue destination="wsf-dx-fyk" kind="show" identifier="ShowComplete" id="WtF-VO-e59"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rti-dX-d9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="145" y="86"/>
         </scene>
-        <!--View Controller-->
+        <!--Reminder Complete View Controller-->
         <scene sceneID="Tk0-N0-jeb">
             <objects>
-                <viewController id="wsf-dx-fyk" sceneMemberID="viewController">
+                <viewController id="wsf-dx-fyk" customClass="ReminderCompleteViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tW5-62-gmW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,7 +86,7 @@
                                 <rect key="frame" x="20" y="573" width="335" height="49"/>
                                 <state key="normal" image="reRecordButton"/>
                                 <connections>
-                                    <segue destination="ykM-4K-Uuh" kind="showDetail" id="7Xq-aS-eDM"/>
+                                    <action selector="retryTouchUpInside:" destination="wsf-dx-fyk" eventType="touchUpInside" id="Hf9-Ut-koi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLH-Ju-FN9">
@@ -95,7 +96,7 @@
                                 </constraints>
                                 <state key="normal" image="readyButton"/>
                                 <connections>
-                                    <segue destination="8MZ-eY-E3t" kind="showDetail" id="Rk5-zf-GK9"/>
+                                    <action selector="doneTouchUpInside:" destination="wsf-dx-fyk" eventType="touchUpInside" id="0HM-rW-iGZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmW-m8-y1z">
@@ -135,6 +136,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VYT-m2-boq"/>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="VLH-Ju-FN9" id="D8z-BD-LJI"/>
+                        <outlet property="pictureView" destination="1wK-S1-oTs" id="hrC-5b-vGI"/>
+                        <outlet property="userwordLabel" destination="zmW-m8-y1z" id="E9M-0U-eg6"/>
+                        <segue destination="8MZ-eY-E3t" kind="show" identifier="ShowLogin" id="Roi-Uh-oyB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jH-G8-f5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -260,13 +267,13 @@
     </scenes>
     <resources>
         <image name="0" width="485" height="455"/>
-        <image name="alterRegButton" width="132.33332824707031" height="16.333333969116211"/>
+        <image name="alterRegButton" width="133" height="17"/>
         <image name="reRecordButton" width="335" height="49"/>
         <image name="readyButton" width="335" height="49"/>
         <image name="recordButton" width="76" height="76"/>
         <image name="sendMessageButton" width="335" height="49"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rk5-zf-GK9"/>
+        <segue reference="Roi-Uh-oyB"/>
     </inferredMetricsTieBreakers>
 </document>

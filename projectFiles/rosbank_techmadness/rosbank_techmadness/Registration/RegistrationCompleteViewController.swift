@@ -44,7 +44,15 @@ class RegistrationCompleteViewController: UIViewController {
                     print("SET WORD SUCCESS: \(success)")
                     
                     DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "ShowLogin", sender: self)
+                        let alert = UIAlertController(title: "Успешно", message: "Ассоциация добавлена", preferredStyle: .alert)
+                        
+                        let acceptAction = UIAlertAction(title: "Далее", style: .default, handler: { [weak alert] (_) in
+                            self.performSegue(withIdentifier: "ShowLogin", sender: self)
+                        })
+                        
+                        alert.addAction(acceptAction)
+                        
+                        self.present(alert, animated: true, completion: nil)
                     }
                 }
             }

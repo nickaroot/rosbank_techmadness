@@ -153,7 +153,7 @@ class API {
         }
         
         class func verifySpeech(login: String, index: Int, speech: Data,
-                          completionHandler: @escaping (_ success: Bool, _ speech: Data?) -> Void) {
+                          completionHandler: @escaping (_ success: Bool) -> Void) {
             
             let path = "/api/speech_standard_check/\(login)"
             
@@ -162,14 +162,14 @@ class API {
                 if success && data != nil {
                     let resp = String(data: data!, encoding: .utf8)
                     if resp == "true" {
-                        completionHandler(true, data)
+                        completionHandler(true)
                     }
                     else {
-                        completionHandler(false, nil)
+                        completionHandler(false)
                     }
                 }
                 else {
-                    completionHandler(false, nil)
+                    completionHandler(false)
                 }
                 
             }

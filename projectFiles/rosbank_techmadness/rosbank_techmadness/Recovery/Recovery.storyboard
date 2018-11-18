@@ -275,38 +275,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы успешно сбросили пароль!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zQ-0G-yzC">
-                                <rect key="frame" x="25" y="89" width="303" height="18"/>
+                                <rect key="frame" x="25" y="89" width="325" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjL-gQ-xEZ">
-                                <rect key="frame" x="0.0" y="20" width="353" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="gKd-Pv-ICA"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите новый пароль:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsN-T9-46c">
-                                <rect key="frame" x="25" y="157" width="303" height="18"/>
+                                <rect key="frame" x="25" y="157" width="325" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yg1-3N-Kxy">
-                                <rect key="frame" x="25" y="195" width="303" height="24"/>
+                                <rect key="frame" x="25" y="195" width="325" height="24"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Подтвердите пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c9L-0x-VWQ">
-                                <rect key="frame" x="25" y="287" width="303" height="24"/>
+                                <rect key="frame" x="25" y="287" width="325" height="24"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioE-rJ-1Sw">
-                                <rect key="frame" x="20" y="598" width="313" height="49"/>
+                                <rect key="frame" x="20" y="598" width="335" height="49"/>
                                 <state key="normal" image="readyButton"/>
                                 <connections>
                                     <segue destination="S2X-Ke-BH8" kind="showDetail" id="W1t-ac-Iqo"/>
@@ -324,7 +324,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UP-Ht-17c">
-                                <rect key="frame" x="31" y="316" width="291" height="3"/>
+                                <rect key="frame" x="53" y="316" width="291" height="3"/>
                                 <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="291" id="RCO-kp-WCb"/>
@@ -389,20 +389,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwk-po-Fhk">
-                                <rect key="frame" x="36" y="520" width="281" height="49"/>
+                                <rect key="frame" x="36" y="520" width="303" height="49"/>
                                 <state key="normal" image="readyButton"/>
                                 <connections>
                                     <segue destination="6mr-DG-Khe" kind="show" id="1ED-do-4Jt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для восстановления логина необходимо ввести номер счета и пройти идентификацию по голосу" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5y-cJ-v7W">
-                                <rect key="frame" x="36" y="40" width="281" height="54"/>
+                                <rect key="frame" x="36" y="40" width="303" height="54"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="____ ____ ____ ____" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CqM-6c-8yA">
-                                <rect key="frame" x="36" y="158.5" width="281" height="30"/>
+                                <rect key="frame" x="36" y="158.5" width="303" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="fNA-OW-QXM"/>
                                 </constraints>
@@ -411,7 +411,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="cc-number"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите банковксий счет:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAu-pJ-hbR">
-                                <rect key="frame" x="36" y="124" width="281" height="19.5"/>
+                                <rect key="frame" x="36" y="124" width="303" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -463,26 +463,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqF-P2-HRE">
-                                <rect key="frame" x="36" y="520" width="281" height="49"/>
+                                <rect key="frame" x="36" y="520" width="303" height="49"/>
                                 <state key="normal" image="readyButton"/>
                                 <connections>
                                     <segue destination="CbI-vj-pQ0" kind="show" id="fnB-nI-PPr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для восстановления пароля необходимо ввести логин и пройти идентификацию по голосу" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbV-g3-Ug5">
-                                <rect key="frame" x="36" y="40" width="281" height="54"/>
+                                <rect key="frame" x="36" y="40" width="303" height="54"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите логин:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="as7-Y6-VSQ">
-                                <rect key="frame" x="36" y="124" width="281" height="21"/>
+                                <rect key="frame" x="36" y="124" width="303" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MhI-j9-H0r">
-                                <rect key="frame" x="36" y="160" width="281" height="24"/>
+                                <rect key="frame" x="36" y="160" width="303" height="24"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -659,7 +659,7 @@
         <!--Восстановление-->
         <scene sceneID="V6x-et-9tO">
             <objects>
-                <viewController id="Iwe-cv-y9w" sceneMemberID="viewController">
+                <viewController id="Iwe-cv-y9w" customClass="RecoveryNewLoginViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZZ9-lY-XH9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -892,7 +892,7 @@
     </scenes>
     <resources>
         <image name="0" width="485" height="455"/>
-        <image name="alterRegButton" width="132.33332824707031" height="16.333333969116211"/>
+        <image name="alterRegButton" width="133" height="17"/>
         <image name="reRecordButton" width="335" height="49"/>
         <image name="readyButton" width="335" height="49"/>
         <image name="recordButton" width="76" height="76"/>
