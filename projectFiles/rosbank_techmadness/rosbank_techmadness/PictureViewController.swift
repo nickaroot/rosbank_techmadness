@@ -9,9 +9,9 @@
 import UIKit
 
 class PictureViewController: UIViewController {
-    @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var imageView: UIImageView!
     
+
+    @IBOutlet weak var recordButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,14 +19,10 @@ class PictureViewController: UIViewController {
     }
     
     @IBAction func recordButtonPressed(_ sender: Any) {
-        recordButton.setImage(UIImage.init(named: "recordButtonRed"), for: .normal)
-        recordButton.isHighlighted = false
-    }
-    
-    @IBAction func recordButtonUpO(_ sender: UIButton) {
         recordButton.setImage(UIImage.init(named: "recordButton"), for: .normal)
         recordButton.isHighlighted = false
     }
+    
     @IBAction func recordButtonDown(_ sender: Any) {
         recordButton.setImage(UIImage.init(named: "recordButtonRed"), for: .normal)
         recordButton.isHighlighted = false
@@ -45,6 +41,5 @@ class PictureViewController: UIViewController {
         recordButton.setImage(UIImage.init(named: "recordButtonRed"), for: .normal)
         recordButton.isHighlighted = false
     }
-    
 }
 

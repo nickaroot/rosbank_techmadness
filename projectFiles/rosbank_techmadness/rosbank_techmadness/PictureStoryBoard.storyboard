@@ -1,58 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zQ1-Gg-gxA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6mr-DG-Khe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Picture View Controller-->
-        <scene sceneID="2a0-f0-qJ7">
+        <scene sceneID="PLp-lt-sy3">
             <objects>
-                <viewController id="zQ1-Gg-gxA" customClass="PictureViewController" customModule="rosbank_techmadness" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pMS-6Q-Fst">
+                <viewController id="6mr-DG-Khe" customClass="PictureViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aN5-VJ-gFX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvG-pO-mm8">
-                                <rect key="frame" x="20" y="88" width="335" height="293"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgD-CX-KwJ">
+                                <rect key="frame" x="149.5" y="507" width="76" height="76"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="hvG-pO-mm8" secondAttribute="height" multiplier="335:293" id="i03-F4-x5E"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHZ-M7-hpH">
-                                <rect key="frame" x="150" y="406" width="76" height="76"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="76" id="dUV-W6-ZVq"/>
-                                    <constraint firstAttribute="width" constant="76" id="kXB-q6-KUN"/>
+                                    <constraint firstAttribute="width" constant="76" id="rda-Mr-0Yr"/>
+                                    <constraint firstAttribute="height" constant="76" id="tDC-zf-1W9"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="recordButton"/>
                                 <connections>
-                                    <action selector="recordButtonPressed:" destination="zQ1-Gg-gxA" eventType="touchDown" id="MCj-V5-aco"/>
-                                    <action selector="recordButtonUpO:" destination="zQ1-Gg-gxA" eventType="touchUpOutside" id="HjV-eB-9e8"/>
+                                    <action selector="recordButtonDown:" destination="6mr-DG-Khe" eventType="touchDown" id="4hX-u1-znj"/>
+                                    <action selector="recordButtonDragInside:" destination="6mr-DG-Khe" eventType="touchDragInside" id="Es2-8n-k89"/>
+                                    <action selector="recordButtonDragOut:" destination="6mr-DG-Khe" eventType="touchDragOutside" id="gif-Y8-vR1"/>
+                                    <action selector="recordButtonPressed:" destination="6mr-DG-Khe" eventType="touchUpInside" id="ZNC-EH-EeJ"/>
+                                    <action selector="recordButtonTouchUp:" destination="6mr-DG-Khe" eventType="touchUpOutside" id="kJ1-CJ-nCe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esq-NH-jjj">
+                                <rect key="frame" x="112.5" y="609" width="150" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="V28-Nc-dtH"/>
+                                </constraints>
+                                <state key="normal" image="alterRegButton"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="pNn-8Z-tYG">
+                                <rect key="frame" x="20" y="40" width="335" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pNn-8Z-tYG" secondAttribute="height" multiplier="335:293" id="cLp-T6-orc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hvG-pO-mm8" firstAttribute="width" secondItem="hvG-pO-mm8" secondAttribute="height" multiplier="335:293" id="wkf-aS-wB7"/>
+                            <constraint firstItem="esq-NH-jjj" firstAttribute="centerX" secondItem="aN5-VJ-gFX" secondAttribute="centerX" id="7FG-iL-rg8"/>
+                            <constraint firstItem="pNn-8Z-tYG" firstAttribute="top" secondItem="jol-KI-L3h" secondAttribute="top" constant="20" id="EgE-Rh-oqn"/>
+                            <constraint firstItem="esq-NH-jjj" firstAttribute="top" secondItem="MgD-CX-KwJ" secondAttribute="bottom" constant="26" id="X1g-9I-3v0"/>
+                            <constraint firstItem="jol-KI-L3h" firstAttribute="bottom" secondItem="MgD-CX-KwJ" secondAttribute="bottom" constant="84" id="g67-Rc-F8q"/>
+                            <constraint firstItem="pNn-8Z-tYG" firstAttribute="leading" secondItem="jol-KI-L3h" secondAttribute="leading" constant="20" id="oQi-fc-pzp"/>
+                            <constraint firstItem="MgD-CX-KwJ" firstAttribute="centerX" secondItem="aN5-VJ-gFX" secondAttribute="centerX" id="qoH-nh-U9r"/>
+                            <constraint firstItem="jol-KI-L3h" firstAttribute="trailing" secondItem="pNn-8Z-tYG" secondAttribute="trailing" constant="20" id="y1H-Ll-9Ye"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fqS-md-wki"/>
+                        <viewLayoutGuide key="safeArea" id="jol-KI-L3h"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="hvG-pO-mm8" id="9N1-cn-ty0"/>
-                        <outlet property="recordButton" destination="cHZ-M7-hpH" id="MZE-Ep-Hhi"/>
+                        <outlet property="recordButton" destination="MgD-CX-KwJ" id="zrJ-cG-Eyu"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HzL-mP-E7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CsH-IG-Jms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57" y="81"/>
+            <point key="canvasLocation" x="145" y="86"/>
         </scene>
     </scenes>
     <resources>
+        <image name="alterRegButton" width="132.33332824707031" height="16.333333969116211"/>
         <image name="recordButton" width="76" height="76"/>
+        <image name="sampleImage" width="485" height="455"/>
     </resources>
 </document>
