@@ -11,7 +11,23 @@ import UIKit
 class PictureViewController: UIViewController {
     
 
+    @IBOutlet weak var passView: UIView!
+    @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    
+    @IBAction func valueChanged(_ sender: UISegmentedControl) {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            passView.isHidden = false
+            loginView.isHidden = true
+        case 1:
+            passView.isHidden = true
+            loginView.isHidden = false
+        default:
+            break
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
