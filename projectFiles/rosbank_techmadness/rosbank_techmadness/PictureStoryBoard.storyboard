@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KIY-RN-yFQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KIY-RN-yFQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgD-CX-KwJ">
-                                <rect key="frame" x="149.5" y="449" width="76" height="76"/>
+                                <rect key="frame" x="149.5" y="507" width="76" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="rda-Mr-0Yr"/>
                                     <constraint firstAttribute="height" constant="76" id="tDC-zf-1W9"/>
@@ -92,7 +92,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esq-NH-jjj">
-                                <rect key="frame" x="112.5" y="551" width="150" height="22"/>
+                                <rect key="frame" x="112.5" y="609" width="150" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="V28-Nc-dtH"/>
                                 </constraints>
@@ -143,7 +143,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZK-eU-dtk">
-                                <rect key="frame" x="20" y="507" width="335" height="49"/>
+                                <rect key="frame" x="20" y="565" width="335" height="49"/>
                                 <state key="normal" image="sendMessageButton"/>
                                 <connections>
                                     <segue destination="6dQ-7t-nxl" kind="show" id="bQR-sP-eWE"/>
@@ -738,7 +738,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVT-ta-cTe">
-                                <rect key="frame" x="20" y="540" width="335" height="49"/>
+                                <rect key="frame" x="20" y="598" width="335" height="49"/>
                                 <state key="normal" image="readyButton"/>
                                 <connections>
                                     <segue destination="Iwe-cv-y9w" kind="showDetail" id="DIt-jU-tZK"/>
