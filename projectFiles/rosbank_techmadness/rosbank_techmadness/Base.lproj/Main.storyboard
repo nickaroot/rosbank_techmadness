@@ -5,50 +5,15 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--РОСБАНК-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="rosbank_techmadness" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjy-HL-Vdk">
-                                <rect key="frame" x="15" y="79" width="345" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="r2V-03-44d"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="KPh-ZK-YTA" kind="show" id="awg-PZ-Sqh"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="cjy-HL-Vdk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Dec-uB-KvF"/>
-                            <constraint firstItem="cjy-HL-Vdk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Hk9-yd-pOL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cjy-HL-Vdk" secondAttribute="trailing" constant="15" id="bWw-ep-WMa"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="РОСБАНК" id="kgU-e4-u3o"/>
-                    <connections>
-                        <outlet property="loginButton" destination="cjy-HL-Vdk" id="bF5-qi-t1w"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1065" y="793"/>
-        </scene>
         <!--Login-->
         <scene sceneID="aR1-LJ-Qwo">
             <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="KPh-ZK-YTA" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Login" id="KPh-ZK-YTA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="H7s-Op-10U"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdj-Yp-Nmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1715" y="533"/>
@@ -64,7 +29,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XOb-My-5cU"/>
+                        <segue destination="KPh-ZK-YTA" kind="relationship" relationship="rootViewController" id="eU2-aI-nHS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZB-Be-X4j" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

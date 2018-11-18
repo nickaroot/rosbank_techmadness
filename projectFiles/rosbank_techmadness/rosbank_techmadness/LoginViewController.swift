@@ -25,11 +25,9 @@ class LoginViewController: UIViewController {
             loginTextField.text = ""
             passwTextField.text = ""
         } else{
-            DispatchQueue.main.async {
                 let alertController = UIAlertController(title: "Ошибка при вводе логина/пароля!", message: "", preferredStyle: UIAlertController.Style.alert)
                 alertController.addAction(UIAlertAction(title: "Ок", style: UIAlertAction.Style.default,handler: nil))
                 self.present(alertController, animated: true, completion: nil)
-            }
         }
         
     }
@@ -59,19 +57,32 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.red
+        
+        addNavBarImage()
+    }
+    
+    func addNavBarImage(){
+        
+        let navController = navigationController!
+        navController.navigationBar.barTintColor = UIColor.white
+        let image = UIImage(named: "launchScreenEmblem")
+        let imageView = UIImageView(image: image)
+        
+        let bannerWidth = navController.navigationBar.frame.size.width
+        let bannerHeight = navController.navigationBar.frame.size.height
+        
+        let bannerX = bannerWidth / 2 - image!.size.width / 2
+        let bannerY = bannerHeight / 2 - image!.size.height / 2
+        
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
+        imageView.contentMode = .scaleAspectFit
+        
+        navigationItem.titleView = imageView
     }
     
     func reminderAlert()->Void{
         
-        //DispatchQueue.main.async {
-//            let alertController = UIAlertController(title: "Мера безопасности", message: "Хотите вспомнить ассоциацию?", preferredStyle: UIAlertController.Style.alert)
-//            alertController.addAction(UIAlertAction(title: "Да", style: UIAlertAction.Style.default,handler: nil))
-//            alertController.addAction(UIAlertAction(title: "Позже", style: UIAlertAction.Style.default,handler: nil))
-//            self.present(alertController, animated: true, completion: nil)
-        
-        
-            
-            let alert = UIAlertController(title: "Мера безопасности", message: "Хотите вспомнить ассоциацию?", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Мера безопасности", message: "Хотите вспомнить ассоциацию?", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "Да", style: .default, handler: {action in
                 switch action.style {
                 case .default:
@@ -85,7 +96,6 @@ class LoginViewController: UIViewController {
             alert.addAction(defaultAction)
             alert.addAction(UIAlertAction(title: "Позже", style: .default,handler: nil))
             self.present(alert, animated: true, completion: nil)
-       // }
         
     }
 }

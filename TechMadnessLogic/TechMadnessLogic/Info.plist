@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Для записи ассоциации нужен микрофон</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Для проверки записанной ассоциации нужно распознавание речи</string>
 </dict>
 </plist>
