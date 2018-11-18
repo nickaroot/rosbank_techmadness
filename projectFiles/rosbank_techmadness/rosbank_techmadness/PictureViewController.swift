@@ -19,11 +19,11 @@ class PictureViewController: UIViewController {
     @IBAction func valueChanged(_ sender: UISegmentedControl) {
         switch segmentControl.selectedSegmentIndex {
         case 0:
-            passView.isHidden = true
-            loginView.isHidden = false
-        case 1:
             passView.isHidden = false
             loginView.isHidden = true
+        case 1:
+            passView.isHidden = true
+            loginView.isHidden = false
         default:
             break
         }
